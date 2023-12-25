@@ -71,7 +71,7 @@ nav:
 本工具仅面向合法授权的企业资产风险检测，请严格遵守法律规定，不得危害国家安全、公共利益，不得损害个人、组织的合法权益，否则应自行承担所引起的一切法律责任。
 </Alert>
 
-下载对应 OS ARCH 的软件包 [Prism X releases](https://github.com/yqcs/heartsk_community/releases/)
+下载对应 OS ARCH 的软件包 [Prism X releases](https://github.com/yqcs/prismx/releases/)
 ，解压之后赋予可执行权限之后直接运行即可。
 
 Linux amd64 运行示例：
