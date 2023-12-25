@@ -4,7 +4,7 @@
 
 - 集渗透前置、后置于一体的轻量型跨平台系统
 
-![pc_home](/static/pc_home.jpg)
+![pc_home](/public/static/pc_home.jpg)
 
 
 ## 系统结构
@@ -83,7 +83,7 @@ $ ./prismx
 运行之后访问`http://yourIP:80`即可进入登录页，使用-port 参数可指定端口。 系统默认账号`prismx/prismx@passw0rd`
 ，首次使用请修改账户名与密码！
 
-<img src="/static/guide/login.png" alt="login Page"/>
+<img src="/public/static/guide/login.png" alt="login Page"/>
 
 ### CLI 命令行
 
@@ -95,7 +95,7 @@ $ ./prismx -h
 $ ./prismx -t 127.0.0.1 -p 1-500,3000-6000
 ```
 
-<img src="/static/cli.png" alt="cli Page"  width="70%"/>
+<img src="/public/static/cli.png" alt="cli Page"  width="70%"/>
 
 ### Linux For ARM（Android）
 
@@ -130,7 +130,7 @@ $ ./prismx
 > 至此，便可成功启动，在手机浏览器访问首页：http://127.0.0.1:8000 但是并不代表可以完整使用了，以非 ROOT 权限执行任务时切记将存活检测切换为
 > Ping 模式！！
 
-<img src="/static/guide/phone.jpg" alt="phone Page" width="30%"/>
+<img src="/public/static/guide/phone.jpg" alt="phone Page" width="30%"/>
 
 
 ## 主机管理
@@ -138,7 +138,7 @@ $ ./prismx
 
 一键生成Agent，点击获取载荷即生成客户端。
 
-<img src="/static/guide/home.jpg" alt="home Page"/>
+<img src="/public/static/guide/home.jpg" alt="home Page"/>
 
 ## 增效工具
 
@@ -148,7 +148,7 @@ $ ./prismx
 >
 > 目录扫描：扫描指定 URL 可能存在安全风险的资源地址。
 
-![img_1.png](/static/guide/infoGet.png)
+![img_1.png](/public/static/guide/infoGet.png)
 
 ## 任务管理
 
@@ -159,7 +159,7 @@ $ ./prismx
 > - 模糊存活：部分主机开启禁 PING，导致常规检测无法验证存活，此时可以启用该选项进行深度检测，默认已选中。
 > - 扫描子域：此功能基于互联网系统，此选项需可访问公网。
 
-![img_1.png](/static/guide/creatTask.png)
+![img_1.png](/public/static/guide/creatTask.png)
 
 ## 扫描配置
 
@@ -178,13 +178,13 @@ $ ./prismx
 
 在执行子域名扫描以及信息收集的模糊搜索任务时，会依赖外界平台。请配置相关平台的身份验证信息，以保证数据的完整性。
 
-![img.png](/static/guide/other.png)
+![img.png](/public/static/guide/other.png)
 
 ### 字典配置
 
 系统内置默认账户、密码组合。如果密码列里出现{user}占位符，则会被替换成用户名。
 
-![img.png](/static/guide/dict.png)
+![img.png](/public/static/guide/dict.png)
 
 ## 插件编写
 
@@ -192,7 +192,7 @@ $ ./prismx
 
 请确保程序具有读写权限以及根目录存在 lib\exploits 文件夹，插件名即是漏洞名称.yaml
 
-![img.png](/static/guide/plugininfo.png)
+![img.png](/public/static/guide/plugininfo.png)
 
 #### 规则及语法
 
@@ -202,4 +202,4 @@ $ ./prismx
 
 **注**：如果发送的请求是 Post Form 请求，Params 参数须先以 URL Encoded 编码转换。
 
-![img.png](/static/guide/pluginRule.png)
+![img.png](/public/static/guide/pluginRule.png)
