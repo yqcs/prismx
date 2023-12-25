@@ -1,3 +1,12 @@
+---
+title: 介绍
+order: 1
+toc: menu
+nav:
+  title: 文档
+  order: 1
+---
+
 # Prism X · 单兵渗透系统
 
 ## 特性
@@ -5,6 +14,7 @@
 - 集渗透前置、后置于一体的轻量型跨平台系统
 
 ![pc_home](/static/pc_home.jpg)
+
 
 
 ## 系统结构

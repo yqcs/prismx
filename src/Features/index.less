@@ -1,0 +1,49 @@
+.features {
+  margin-top: 5%;
+}
+
+.title {
+  color: #3b426b;
+  font-size: 36px;
+  text-align: center;
+  @media (max-width: 1200px) {
+    margin-top: 30%;
+    margin-bottom: 10%;
+  }
+}
+
+.zdyDivC {
+  margin: 0 auto;
+  @media (min-width: 1200px) {
+    width: 60%;
+  }
+}
+.card {
+  margin-top: 10%;
+}
+.card + .card {
+  color: #3a416f;
+  border-left: 1px solid #e1e7ff;
+}
+
+&:hover {
+  color: inherit;
+}
+
+& + & {
+  border-left: 1px solid #e1e7ff;
+}
+
+.normal {
+  text-align: center;
+
+  .cardTitle {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+}
+
+.summary {
+  color: #5d6494;
+  line-height: 1.6;
+}
