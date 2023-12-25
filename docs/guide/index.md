@@ -16,7 +16,6 @@ nav:
 ![pc_home](/static/pc_home.jpg)
 
 
-
 ## 系统结构
 
 系统功能如下：
@@ -87,10 +86,7 @@ $ ./prismx
 
 ### WEB 模式
 
-为了方便使用，系统提供了 CLI 命令行以及更具交互性的 WEB 模式两种运行方式。WEB 模式需提供 License 文件，运行`./prismx`
-命令即可启动。 LOW BUG 版本已经签发了 WEB 模式需要的 License 及公钥文件。
-
-运行之后访问`http://yourIP:80`即可进入登录页，使用-port 参数可指定端口。 系统默认账号`prismx/prismx@passw0rd`
+WEB 模式需提供 License 文件，运行`./prismx`命令之后访问`http://yourIP:80`即可进入登录页，使用 -port 参数可指定端口。系统默认账号`prismx/prismx@passw0rd`
 ，首次使用请修改账户名与密码！
 
 <img src="/static/guide/login.png" alt="login Page"/>
