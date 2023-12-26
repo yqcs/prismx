@@ -11,10 +11,9 @@ nav:
 
 ## 特性
 
-- 集渗透前置、后置于一体的轻量型跨平台系统
+- 一体化的轻量型跨平台渗透系统
 
 ![pc_home](/static/pc_home.jpg)
-
 
 ## 系统结构
 
@@ -63,7 +62,6 @@ nav:
     </li>
   </ul>
 </Tree>
-
 
 ## 启动
 
@@ -138,17 +136,15 @@ $ ./prismx
 
 <img src="/static/guide/phone.jpg" alt="phone Page" width="30%"/>
 
-
 ## 主机管理
 
-
-一键生成Agent，点击获取载荷即生成客户端。
+一键生成 Agent，点击获取载荷即生成客户端。
 
 <img src="/static/guide/home.jpg" alt="home Page"/>
 
 ## 增效工具
 
-> 模糊搜索：结果基于Hunter平台，使用该功需配置Hunter Api Key
+> 模糊搜索：结果基于 Hunter 平台，使用该功需配置 Hunter Api Key
 >
 > 子域名：该功能基于互联网系统，需确保能正常访问公网
 >
