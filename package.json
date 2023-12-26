@@ -1,21 +1,18 @@
 {
-  "private": true,
   "name": "dumi-site",
   "version": "1.0.0",
-  "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider&&dumi dev",
-    "docs:build": "dumi build",
-    "docs:deploy": "gh-pages -d dist",
-    "build": "father-build",
-    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
-    "test": "umi-test",
-    "test:coverage": "umi-test --coverage",
-    "prepublishOnly": "npm run build"
-  },
+  "private": true,
   "module": "es/index.js",
   "typings": "es/index.d.ts",
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+  "scripts": {
+    "build": "father-build",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d dist",
+    "prepublishOnly": "npm run build",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider&&dumi dev",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
   },
   "lint-staged": {
     "*.{js,jsx,less,md,json}": [
@@ -30,6 +27,7 @@
     "@types/node": "^17.0.38",
     "antd": "^4 .20.7",
     "flex.css": "^1.1.7",
+    "gh-pages": "^6.1.1",
     "prettier-plugin-organize-imports": "^2.3.4",
     "react": "^18.1.0"
   },
@@ -42,9 +40,11 @@
     "babel-plugin-import": "^1.13.5",
     "dumi": "^1.1.42",
     "father-build": "^1.22.2",
-    "gh-pages": "^4.0.0",
     "lint-staged": "^12.5.0",
     "prettier": "^2.6.2",
     "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   }
 }
