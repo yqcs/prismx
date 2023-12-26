@@ -2,7 +2,7 @@
 
 # :: 棱镜 X · 一体化的轻量型跨平台渗透系统
 
-----
+---
 
 <p align="center">
   <a href="https://prismx.io/guide" target="_blank">使用文档</a> ·
@@ -13,13 +13,12 @@
 
 ## 启动
 
-### · WEB系统
+### · WEB 系统
 
-下载对应 OS ARCH 的软件包 [Prism X releases](https://github.com/yqcs/heartsk_community/releases/)
+下载对应 OS ARCH 的软件包 [Prism X releases](https://github.com/yqcs/prismx/releases/)
 ，解压之后赋予可执行权限之后直接运行即可。
 
 <img src="public/static/pc_home.jpg" alt="pc_home"/>
-
 
 Linux Amd64 运行示例：
 
@@ -30,19 +29,19 @@ $ cd prismx_linux_amd64
 $ chmod +x prismx
 $ ./prismx
 ```
+
 #### 系统默认账号：`prismx/prismx@passw0rd`
 
 ### · 界面预览
 
 <img src="public/static/view.jpg" alt="pc_home"/>
 
-----
+---
 
-## QQ安全研究群：
+## QQ 安全研究群：
 
 ### [点击加入：528118163](https://jq.qq.com/?_wv=1027&k=azWZhmSy)
 
 ## 加群 / 联系（左） | 公众号：遮天实验室（右）
 
 <img src="public/static/wx.jpg" width="200"><img src="public/static/wx_qrcode.jpg" width="200">
-
