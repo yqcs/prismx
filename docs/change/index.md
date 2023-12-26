@@ -15,6 +15,6 @@ sidemenu: false
 
 首版上线。
 
-### 联系
+### 联系 / 加群
 
 <img src="/static/wx.jpg" width="110px"/>
