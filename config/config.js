@@ -5,7 +5,7 @@ export default defineConfig({
     hostname: "https://prismx.io",
   },
   hash: true,
-  title: "Prism X",
+  title: "Prism X / 棱镜X · 单兵渗透平台",
   mode: "site",
   logo: "/static/scan.png",
   runtimePublicPath: true,
