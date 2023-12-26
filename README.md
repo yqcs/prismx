@@ -1,6 +1,6 @@
 <img src="public/static/scan.png" alt="pc_home" width="30%" />
 
-# :: 棱镜 X · 集渗透前置、后置于一体的轻量型跨平台系统
+# :: 棱镜 X · 一体化的轻量型跨平台渗透系统
 
 ----
 
