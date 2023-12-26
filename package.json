@@ -6,7 +6,7 @@
   "typings": "es/index.d.ts",
   "scripts": {
     "build": "father-build",
-    "docs:build": "dumi build",
+    "docs:build": "set NODE_OPTIONS=--openssl-legacy-provider&&dumi build",
     "docs:deploy": "gh-pages -d dist",
     "prepublishOnly": "npm run build",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
