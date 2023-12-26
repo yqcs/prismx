@@ -6,11 +6,12 @@
   "typings": "es/index.d.ts",
   "scripts": {
     "build": "father-build",
-    "docs:build": " NODE_OPTIONS=--openssl-legacy-provider dumi build",
+    "docs:build": "NODE_OPTIONS=--openssl-legacy-provider dumi build",
+    "docs:buildForWindows": "set NODE_OPTIONS=--openssl-legacy-provider&&dumi build",
     "docs:deploy": "gh-pages -d dist",
     "prepublishOnly": "npm run build",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
-    "start": "NODE_OPTIONS=--openssl-legacy-provider dumi dev",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider&&dumi dev",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },
