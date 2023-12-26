@@ -16,4 +16,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.STUDENT_BOOK_TOKEN }}
           publish_dir: ./dist
