@@ -75,7 +75,7 @@ nav:
 Linux amd64 运行示例：
 
 ```bash
-$ wget https://github.com/yqcs/prismx/releases/download/1.0.10/prismx_linux_amd64.zip
+$ wget https://github.com/yqcs/prismx/releases/download/{version}/prismx_linux_amd64.zip
 $ unzip prismx_linux_amd64.zip
 $ cd prismx_linux_amd64
 $ chmod +x prismx
@@ -114,7 +114,7 @@ Termux 支撑。
 $ pkg update
 $ pkg upgrade
 $ pkg install wget
-$ wget https://github.com/yqcs/prismx/releases/download/1.0.10/prismx_linux_arm64.zip
+$ wget https://github.com/yqcs/prismx/releases/download/{version}/prismx_linux_arm64.zip
 $ unzip prismx_linux_arm64.zip
 $ cd prismx_linux_arm64
 $ chmod +x prismx

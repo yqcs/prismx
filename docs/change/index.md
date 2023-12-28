@@ -15,6 +15,12 @@ sidemenu: false
 
 首版上线。
 
-### 联系 / 加群
+---
 
-<img src="/static/wx.jpg" width="110px"/>
+### QQ 用户体验群：
+
+#### [点击加入：528118163](https://jq.qq.com/?_wv=1027&k=azWZhmSy)
+
+#### 微信群 / 联系（左） | 公众号：遮天实验室（右）
+
+<img src="/static/wx.jpg" width="150"><img src="/static/wx_qrcode.jpg" width="150">
