@@ -28,18 +28,14 @@ const Apply = () => {
                     <div>
                       <a
                         target={"_blank"}
-                        href={
-                          "https://github.com/yqcs/prismx/releases/download/LOWBUG@Latest1.0.1/HeartsK_windows_amd64.zip"
-                        }
+                        href={"https://github.com/yqcs/prismx/releases/"}
                         className={styles.download}
                       >
                         Windows 64 位
                       </a>
                       <a
                         target={"_blank"}
-                        href={
-                          "https://github.com/yqcs/prismx/releases/download/LOWBUG@Latest1.0.1/HeartsK_windows_386.zip"
-                        }
+                        href={"https://github.com/yqcs/prismx/releases/"}
                         className={styles.download}
                       >
                         32 位版本
@@ -62,18 +58,14 @@ const Apply = () => {
                     </svg>
                     <div className={styles.remark}>MacOS</div>
                     <a
-                      href={
-                        "https://github.com/yqcs/prismx/releases/download/LOWBUG@Latest1.0.1/HeartsK_darwin_amd64.zip"
-                      }
+                      href={"https://github.com/yqcs/prismx/releases/"}
                       target={"_blank"}
                       className={styles.download}
                     >
                       下载MacOS AMD
                     </a>
                     <a
-                      href={
-                        "https://github.com/yqcs/prismx/releases/download/LOWBUG@Latest1.0.1/HeartsK_darwin_arm64.zip"
-                      }
+                      href={"https://github.com/yqcs/prismx/releases/"}
                       target={"_blank"}
                       className={styles.download}
                     >
@@ -97,16 +89,14 @@ const Apply = () => {
                     </svg>
                     <div className={styles.remark}>UOS, Deepin, Ubuntu</div>
                     <a
-                      href={
-                        "https://github.com/yqcs/prismx/releases/download/LOWBUG@Latest1.0.1/HeartsK_linux_amd64.zip"
-                      }
+                      href={"https://github.com/yqcs/prismx/releases/"}
                       target={"_blank"}
                       className={styles.download}
                     >
                       Linux AMD64 位
                     </a>
                     <a
-                      href={"https://github.com/yqcs/prismx/releases/latest"}
+                      href={"https://github.com/yqcs/prismx/releases/"}
                       target={"_blank"}
                       className={styles.download}
                     >
