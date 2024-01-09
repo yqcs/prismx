@@ -75,7 +75,7 @@ nav:
 Linux amd64 运行示例：
 
 ```bash
-$ wget https://github.com/yqcs/prismx/releases/download/{version}/prismx_linux_amd64.zip
+$ wget https://github.com/yqcs/prismx/releases/download/{version}/prismx.zip
 $ unzip prismx_linux_amd64.zip
 $ cd prismx_linux_amd64
 $ chmod +x prismx
@@ -84,7 +84,7 @@ $ ./prismx
 
 ### WEB 模式
 
-WEB 模式需提供 License 文件，运行`./prismx`命令之后访问`http://yourIP:80`即可进入登录页，使用 -port 参数可指定端口。系统默认账号`prismx/prismx@passw0rd`
+WEB 模式需提供 License 文件，运行`./prismx`命令之后访问`https://yourIP:443`即可进入登录页，使用 -port 参数可指定端口。系统默认账号`prismx/prismx@passw0rd`
 ，首次使用请修改账户名与密码！
 
 <img src="/static/guide/login.png" alt="login Page"/>
@@ -114,7 +114,7 @@ Termux 支撑。
 $ pkg update
 $ pkg upgrade
 $ pkg install wget
-$ wget https://github.com/yqcs/prismx/releases/download/{version}/prismx_linux_arm64.zip
+$ wget https://github.com/yqcs/prismx/releases/download/{version}/prismx.zip
 $ unzip prismx_linux_arm64.zip
 $ cd prismx_linux_arm64
 $ chmod +x prismx

@@ -23,7 +23,7 @@
 Linux Amd64 运行示例：
 
 ```bash
-$ wget https://github.com/yqcs/prismx/releases/download/{version}/prismx_linux_amd64.zip
+$ wget https://github.com/yqcs/prismx/releases/download/{version}/prismx.zip
 $ unzip prismx_linux_amd64.zip
 $ cd prismx_linux_amd64
 $ chmod +x prismx
