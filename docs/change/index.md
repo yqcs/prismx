@@ -11,6 +11,13 @@ sidemenu: false
 系统可能会有部分功能不稳定，请谨慎使用；如果体验后对系统有任何建议或合作想法，欢迎在讨论群中进行反馈和交流(<a href="https://github.com/yqcs/prismx/issues">issues</a>)❤
 </Alert>
 
+#### 1.0.29 （2024-1-12）：
+
+- 修复 mssql 爆破异常
+- 修复 pgsql 爆破异常
+- 修复 oracle 不走代理
+- 添加 vnc 服务爆破
+
 #### 1.0.28 （2024-1-9）：
 
 - 修复全局代理 bug
