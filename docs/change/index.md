@@ -11,6 +11,16 @@ sidemenu: false
 系统可能会有部分功能不稳定，请谨慎使用；如果体验后对系统有任何建议或合作想法，欢迎在讨论群中进行反馈和交流(<a href="https://github.com/yqcs/prismx/issues">issues</a>)❤
 </Alert>
 
+#### 1.1.0 （2024-1-17）：
+
+- 修复 前端端口过多导致的卡顿问题
+- 修复 前端分辨率过低导致 UI 错位问题
+- 新增 Nuclei 引擎，nuclei 的 poc 请手动放置 `lib\exploits\nuclei` 目录
+
+#### Tips:
+
+> Nuclei 引擎默认为禁用，在创建扫描任务时在高级设定中手动开启。遇到过多 web 端口请谨慎使用，经测试扫描一个 C 段，不开 nuclei 引擎只占用系统约 300m 内存，开启后占用到了 2G 以上
+
 #### 1.0.29 （2024-1-12）：
 
 - 修复 mssql 爆破异常
