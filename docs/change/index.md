@@ -11,6 +11,11 @@ sidemenu: false
 系统可能会有部分功能不稳定，请谨慎使用；如果体验后对系统有任何建议或合作想法，欢迎在讨论群中进行反馈和交流(<a href="https://github.com/yqcs/prismx/issues">issues</a>)❤
 </Alert>
 
+#### 1.1.2 （2024-2-1）：
+
+- 解决退出 shell 终端导致程序停止运行问题
+- 修复部分 UI 兼容性
+
 #### 1.1.1 （2024-1-22）：
 
 - 修复 Nuclei 引擎 Linux 下 poc 路径错误的问题
