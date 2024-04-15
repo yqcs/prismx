@@ -39,6 +39,8 @@ sidemenu: false
         </tr>  
    <tr>  
             <td>外部POC扩展</td>  
+              <td></td>  
+    <td>溯源辅助工具</td>  
         </tr>  
     </table>  
 </div>
