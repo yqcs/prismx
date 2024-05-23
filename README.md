@@ -23,11 +23,13 @@
 Linux Amd64 运行示例：
 
 ```bash
-$ wget https://github.com/yqcs/prismx/releases/download/{version}/prismx.zip
-$ unzip prismx_linux_amd64.zip
-$ cd prismx_linux_amd64
-$ chmod +x prismx
-$ ./prismx
+$ wget https://github.com/yqcs/prismx/releases/download/{new version}/built.zip
+$ wget https://github.com/yqcs/prismx/releases/download/{new version}/lib.zip
+$ wget https://github.com/yqcs/prismx/releases/download/{new version}/prismx_linux_amd64
+$ unzip built.zip
+$ unzip lib.zip
+$ chmod +x prismx_linux_amd64
+$ ./prismx_linux_amd64
 ```
 
 #### 系统默认账号：`prismx/prismx@passw0rd`
