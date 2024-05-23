@@ -8,7 +8,8 @@
   <a href="https://prismx.io/guide" target="_blank">使用文档</a> ·
   <a href="">主机管理</a> ·
   <a href="">风险扫描</a> ·
-  <a href="">漏洞利用</a> 
+  <a href="">漏洞利用</a> ·
+  <a href="">溯源辅助</a>
 </p>
 
 ## 启动
