@@ -93,12 +93,12 @@ WEB 模式需提供 License 文件，运行`./prismx_linux_amd64`命令之后访
 
 ### CLI 命令行
 
-命令行模式无需授权及公钥文件，但是只具有基础的扫描模块，无法使用 WEB 模式的扫描配置以及信息收集等高级功能。执行-h
+命令行模式无需任何依赖文件，但是只具有基础的扫描模块，无法使用 WEB 模式的扫描配置以及信息收集等高级功能。执行-h
 命令可获取相关帮助。
 
 ```bash
-$ ./prismx -h
-$ ./prismx -t 127.0.0.1 -p 1-500,3000-6000
+$ ./prismx_linux_amd64_cli -h
+$ ./prismx_linux_amd64_cli -t 127.0.0.1 -p 1-500,3000-6000
 ```
 
 <img src="/static/cli.png" alt="cli Page"  width="70%"/>
