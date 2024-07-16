@@ -9,65 +9,11 @@ nav:
 
 # Prism X · 单兵渗透系统
 
-## 特性
-
-- 一体化的轻量型跨平台渗透系统
-
-![pc_home](/static/pc_home.jpg)
-
-## 系统结构
-
-系统功能如下：
-
-<Tree>
-  <ul>
-    <li>
-      仪表盘
-      <ul>
-        <li>
-          工作台
-        </li>
-      </ul>
-    </li>
-    <li>
-      增效工具
-          <ul>
-            <li>资产收集</li>
-            <li>邮件测试</li>
-            <li>遮天平台</li>
-            <li>知识文库</li>
-          </ul>
-      </li>
-    <li>
-      任务管理
-          <ul>
-            <li>任务列表</li>
-            <li>新建任务</li>
-          </ul>
-    </li>
-    <li>
-      扫描配置
-          <ul>
-            <li>扫描参数</li>
-            <li>插件管理</li>
-          </ul>
-    </li>
-    <li>
-      系统设定
-          <ul>
-            <li>基本设置</li>
-            <li>资源管理</li>
-            <li>用户列表</li>
-          </ul>
-    </li>
-  </ul>
-</Tree>
-
-## 启动
-
-<Alert type="warning">
+ <Alert type="warning">
 本工具仅面向合法授权的企业资产风险检测，请严格遵守法律规定，不得危害国家安全、公共利益，不得损害个人、组织的合法权益，否则应自行承担所引起的一切法律责任。
 </Alert>
+
+## 启动
 
 下载对应 OS ARCH 的软件包 [Prism X releases](https://github.com/yqcs/prismx/releases/)
 ，解压之后赋予可执行权限之后直接运行即可。
@@ -89,11 +35,11 @@ $ ./prismx_linux_amd64
 WEB 模式需提供 License 文件，运行`./prismx_linux_amd64`命令之后访问`https://yourIP:443`即可进入登录页，使用 -port 参数可指定端口。系统默认账号`prismx/prismx@passw0rd`
 ，首次使用请修改账户名与密码！
 
-<img src="/static/guide/login.png" alt="login Page"/>
+<img src="/static/guide/login.png" alt="login Page" width="80%"/>
 
 ### CLI 命令行
 
-命令行模式无需任何依赖文件，但是只具有基础的扫描模块，无法使用 WEB 模式的扫描配置以及信息收集等高级功能。执行-h
+命令行模式无需任何依赖文件，但是只具有基础的指纹扫描和漏洞验证功能，无法使用 WEB 模式的扫描配置以及信息收集等高级功能。执行-h
 命令可获取相关帮助。
 
 ```bash
