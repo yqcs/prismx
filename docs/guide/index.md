@@ -21,9 +21,9 @@ nav:
 Linux amd64 运行示例：
 
 ```bash
-$ wget https://github.com/yqcs/prismx/releases/download/{new version}/built.zip
-$ wget https://github.com/yqcs/prismx/releases/download/{new version}/lib.zip
-$ wget https://github.com/yqcs/prismx/releases/download/{new version}/prismx_linux_amd64
+$ wget https://oss.prismx.io/built.zip
+$ wget https://oss.prismx.io/lib.zip
+$ wget https://oss.prismx.io/prismx_linux_amd64
 $ unzip built.zip
 $ unzip lib.zip
 $ chmod +x prismx_linux_amd64

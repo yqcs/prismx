@@ -1,1 +1,0 @@
-public/static/hub/** filter=lfs diff=lfs merge=lfs -text
