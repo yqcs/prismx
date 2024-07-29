@@ -15,10 +15,9 @@ nav:
 
 ## 启动
 
-下载对应 OS ARCH 的软件包 [Prism X releases](https://github.com/yqcs/prismx/releases/)
-，解压之后赋予可执行权限之后直接运行即可。
+### · WEB 系统
 
-Linux amd64 运行示例：
+Linux Amd64 运行示例：
 
 ```bash
 $ wget https://oss.prismx.io/built.zip
@@ -30,24 +29,30 @@ $ chmod +x prismx_linux_amd64
 $ ./prismx_linux_amd64
 ```
 
-### WEB 模式
+更多系统架构：
+https://github.com/yqcs/prismx/releases/
 
-WEB 模式需提供 License 文件，运行`./prismx_linux_amd64`命令之后访问`https://yourIP:443`即可进入登录页，使用 -port 参数可指定端口。系统默认账号`prismx/prismx@passw0rd`
+启动后访问`https://yourIP:443`即可进入登录页，使用 -port 参数可指定端口。系统默认账号`prismx/prismx@passw0rd`
 ，首次使用请修改账户名与密码！
 
-<img src="/static/guide/login.png" alt="login Page" width="80%"/>
+#### 主页：
 
-### CLI 命令行
+<img src="/static/pc_home.jpg" alt="pc_home"/>
 
-命令行模式无需任何依赖文件，但是只具有基础的指纹扫描和漏洞验证功能，无法使用 WEB 模式的扫描配置以及信息收集等高级功能。执行-h
-命令可获取相关帮助。
+#### 数据大屏：
+
+<img src="/static/view.jpg" alt="pc_home"/>
+
+### · CLI 命令行
+
+命令行模式无需任何依赖文件，只具有基础的扫描模块。执行-h 命令可获取相关帮助。
 
 ```bash
 $ ./prismx_linux_amd64_cli -h
 $ ./prismx_linux_amd64_cli -t 127.0.0.1 -p 1-500,3000-6000
 ```
 
-<img src="/static/cli.png" alt="cli Page"  width="70%"/>
+<img src="/static/cli.png" alt="pc_home"/>
 
 ### Linux For ARM（Android）
 
@@ -62,11 +67,13 @@ Termux 支撑。
 $ pkg update
 $ pkg upgrade
 $ pkg install wget
-$ wget https://github.com/yqcs/prismx/releases/download/{version}/prismx.zip
-$ unzip prismx_linux_arm64.zip
-$ cd prismx_linux_arm64
-$ chmod +x prismx
-$ ./prismx
+$ wget https://oss.prismx.io/built.zip
+$ wget https://oss.prismx.io/lib.zip
+$ wget https://oss.prismx.io/prismx_linux_amd64
+$ unzip built.zip
+$ unzip lib.zip
+$ chmod +x prismx_linux_amd64
+$ ./prismx_linux_amd64
 ```
 
 未授予 Root 权限会出现错误：` listen tcp 0.0.0.0:80: bind: permission denied`，使用-port 参数切换绑定端口即可。
