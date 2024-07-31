@@ -10,10 +10,10 @@
 
 <p align="center">
   <a href="https://prismx.io/guide" target="_blank">使用文档</a> ·
-  <a href="https://prismx.io/guide">主机管理</a> ·
+  <a href="https://prismx.io/guide">远程管理</a> ·
   <a href="https://prismx.io/guide">风险扫描</a> ·
-  <a href="https://prismx.io/guide">漏洞利用</a> ·
-  <a href="https://prismx.io/guide">应急辅助</a>
+  <a href="https://prismx.io/guide">邮件测试</a> ·
+  <a href="https://prismx.io/guide">一键应急</a>
 </p>
 
 ## 启动
