@@ -18,7 +18,8 @@ export default defineConfig({
     },
     {
       name: "description",
-      content: ":: 棱镜 X · 自动化企业网络安全风险检测、漏洞扫描工具。",
+      content:
+        ":: Prism X · Automated Enterprise Network Security Risk Detection and Vulnerability Scanning Tool  /  棱镜 X · 自动化企业网络安全风险检测、漏洞扫描工具",
     },
   ],
   exportStatic: {},
