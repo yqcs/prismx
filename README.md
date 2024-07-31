@@ -32,8 +32,8 @@ $ chmod +x prismx_linux_amd64
 $ ./prismx_linux_amd64
 ```
 
-更多系统架构：
-https://github.com/yqcs/prismx/releases/
+存储仓库：
+https://oss.prismx.io
 
 启动后访问`https://yourIP:443`即可进入登录页，使用 -port 参数可指定端口。系统默认账号`prismx/prismx@passw0rd`
 ，首次使用请修改账户名与密码！
