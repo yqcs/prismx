@@ -10,6 +10,17 @@ export default defineConfig({
   logo: "/static/scan.png",
   runtimePublicPath: true,
   favicon: "/static/scan.svg",
+  metas: [
+    {
+      name: "keywords",
+      content:
+        "棱镜X,PrismX,prismx,棱镜,prism,漏洞扫描器,漏洞扫描工具,渗透工具,渗透平台",
+    },
+    {
+      name: "description",
+      content: ":: 棱镜 X · 自动化企业网络安全风险检测、漏洞扫描工具。",
+    },
+  ],
   exportStatic: {},
   extraBabelPlugins: [
     [
