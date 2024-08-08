@@ -17,7 +17,12 @@ nav:
 
 ### · WEB 系统
 
-Linux Amd64 运行示例：
+##### 依赖文件：
+
+- lib.zip： 数据库、授权文件，web 版需下载
+- built.zip ：远程管理客户端，仅专业版授权需下载
+
+存储仓库： https://oss.prismx.io Linux Amd64 运行示例：
 
 ```bash
 $ wget https://oss.prismx.io/built.zip
@@ -28,9 +33,6 @@ $ unzip lib.zip
 $ chmod +x prismx_linux_amd64
 $ ./prismx_linux_amd64
 ```
-
-存储仓库：
-https://oss.prismx.io
 
 启动后访问`https://yourIP:443`即可进入登录页，使用 -port 参数可指定端口。系统默认账号`prismx/prismx@passw0rd`
 ，首次使用请修改账户名与密码！

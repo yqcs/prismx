@@ -28,14 +28,14 @@ const Apply = () => {
                     <div>
                       <a
                         target={"_blank"}
-                        href={"https://oss.prismx.io/prismx_windows_amd64.exe"}
+                        href={"https://prismx.io/guide"}
                         className={styles.download}
                       >
                         Windows 64 位
                       </a>
                       <a
                         target={"_blank"}
-                        href={"https://oss.prismx.io/prismx_windows_arm64.exe"}
+                        href={"https://prismx.io/guide"}
                         className={styles.download}
                       >
                         arm 版本
@@ -58,14 +58,14 @@ const Apply = () => {
                     </svg>
                     <div className={styles.remark}>MacOS</div>
                     <a
-                      href={"https://oss.prismx.io/prismx_darwin_amd64"}
+                      href={"https://prismx.io/guide"}
                       target={"_blank"}
                       className={styles.download}
                     >
                       下载MacOS AMD
                     </a>
                     <a
-                      href={"https://oss.prismx.io/prismx_darwin_arm64"}
+                      href={"https://prismx.io/guide"}
                       target={"_blank"}
                       className={styles.download}
                     >
@@ -89,14 +89,14 @@ const Apply = () => {
                     </svg>
                     <div className={styles.remark}>UOS, Deepin, Ubuntu</div>
                     <a
-                      href={"https://oss.prismx.io/prismx_linux_amd64"}
+                      href={"https://prismx.io/guide"}
                       target={"_blank"}
                       className={styles.download}
                     >
                       Linux AMD64 位
                     </a>
                     <a
-                      href={"https://github.com/yqcs/prismx/releases/"}
+                      href={"https://prismx.io/guide"}
                       target={"_blank"}
                       className={styles.download}
                     >

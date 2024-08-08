@@ -11,7 +11,7 @@ sidemenu: false
 <table>
             <th>命令行</th>
             <th>社区版</th>  
-            <th>高级版</th>  
+            <th>专业版</th>  
         <tr>  
             <td>跨平台支持</td>  
             <td>命令行版全部功能</td>  
