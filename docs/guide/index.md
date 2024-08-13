@@ -56,7 +56,7 @@ $ ./prismx_linux_amd64_cli -t 127.0.0.1 -p 1-500,3000-6000
 
 <img src="/static/cli.png" alt="pc_home"/>
 
-### Linux For ARM（Android）
+### · Linux For ARM（Android）
 
 #### 具有 Root 权限可以避免百分之九十的问题！
 
