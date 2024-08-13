@@ -35,12 +35,12 @@ sidemenu: false
      <tr>  
             <td>自定义弱口令检测</td>  
             <td>灵活的插件支持</td>  
-            <td>漏洞文库权限</td>  
+            <td><del>漏洞文库权限</del></td>  
         </tr>  
      <tr>  
             <td>外部POC扩展</td>  
-              <td>邮件测试</td>  
-         <td>免杀平台权限</td>  
+            <td>邮件测试</td>  
+           <td><del>免杀平台权限</del></td>  
         </tr>  
     </table>  
 </div>
