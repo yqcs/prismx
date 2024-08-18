@@ -23,7 +23,6 @@ nav:
 
 存储仓库： https://oss.prismx.io Linux Amd64 运行示例：
 
-
 ```bash
 $ wget https://oss.prismx.io/lib.zip
 $ wget https://oss.prismx.io/prismx_linux_amd64
