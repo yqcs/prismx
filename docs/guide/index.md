@@ -56,10 +56,7 @@ $ ./prismx_linux_amd64_cli -t 127.0.0.1 -p 1-500,3000-6000
 
 #### 具有 Root 权限可以避免百分之九十的问题！
 
-安卓设备为例，直接使用 adb push 推送到 `/data/local/tmp/`目录，然后使用`chmod +x `赋予可执行权限即可直接运行。该方案不便随时运行，可使用终端软件
-Termux 支撑。
-
-下载终端工具[Termux](https://termux.com/) ，打开软件之后更新软件包然后安装 wget，再下载二进制程序。
+安卓设备为例，下载终端工具 [Termux](https://termux.com/) ，更新软件包然后安装 wget，再下载二进制程序，赋予权限后即可运行。
 
 ```bash
 $ pkg update
