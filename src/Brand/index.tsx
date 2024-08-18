@@ -7,11 +7,9 @@ const Brand = () => {
     <div className={styles.brand}>
       <div>
         <div className={styles.content}>
-          <span className={styles.title}>
-            轻量，跨平台
-          </span>
+          <span className={styles.title}>轻量，跨平台</span>
           <div className={styles.desc}>
-            支持Windows、Linux、MacOS，甚至可以在Raspberry Pi、安卓手机上构建您的风险检测系统
+            支持Windows、Linux、MacOS，甚至可以在Raspberry Pi、安卓手机上运行
           </div>
           <div className={styles.homeDiv}>
             <div className={styles.phone}>

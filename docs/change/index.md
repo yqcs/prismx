@@ -11,6 +11,12 @@ sidemenu: false
 系统可能会有部分功能不稳定，请谨慎使用；如果体验后对系统有任何建议或合作想法，欢迎在讨论群中进行反馈和交流(<a href="https://github.com/yqcs/prismx/issues">issues</a>)❤
 </Alert>
 
+#### 1.4.2：
+
+- JNDI 服务修改为外部依赖
+- fastjson、log4j 扫描插件更新
+- 新增敏感信息扫描插件
+
 #### 1.3.5：
 
 - 新增部分指纹

@@ -19,13 +19,11 @@ nav:
 
 ##### 依赖文件：
 
-- lib.zip： 数据库、授权文件，web 版需下载
-- built.zip ：远程管理客户端，仅专业版授权需下载
+- lib.zip： web 版依赖库，CLI 模式无需下载。
 
 存储仓库： https://oss.prismx.io Linux Amd64 运行示例：
 
 ```bash
-$ wget https://oss.prismx.io/built.zip
 $ wget https://oss.prismx.io/lib.zip
 $ wget https://oss.prismx.io/prismx_linux_amd64
 $ unzip built.zip

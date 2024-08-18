@@ -13,7 +13,7 @@ const Banner = () => {
               <div className={styles.left}>
                 <div className={styles.title}>棱镜X · 单兵渗透平台</div>
                 <div className={styles.summary}>
-                  <div>一体化的轻量型跨平台渗透系统</div>
+                  <div>轻量型跨平台单兵渗透系统</div>
                 </div>
                 <a href="/guide">
                   <div className={styles.download}>开始使用</div>
