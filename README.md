@@ -29,7 +29,6 @@
 ```bash
 $ wget https://oss.prismx.io/lib.zip
 $ wget https://oss.prismx.io/prismx_linux_amd64
-$ unzip built.zip
 $ unzip lib.zip
 $ chmod +x prismx_linux_amd64
 $ ./prismx_linux_amd64
