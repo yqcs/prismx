@@ -23,6 +23,7 @@ nav:
 
 存储仓库： https://oss.prismx.io Linux Amd64 运行示例：
 
+
 ```bash
 $ wget https://oss.prismx.io/lib.zip
 $ wget https://oss.prismx.io/prismx_linux_amd64
@@ -31,8 +32,7 @@ $ chmod +x prismx_linux_amd64
 $ ./prismx_linux_amd64
 ```
 
-启动后访问`https://yourIP:443`即可进入登录页，使用 -port 参数可指定端口。系统默认账号`prismx/prismx@passw0rd`
-，首次使用请修改账户名与密码！
+启动后访问`https://yourIP:443`即可进入登录页，使用 -port 参数可指定端口。系统默认账号`prismx/prismx@passw0rd`，首次使用请修改账户名与密码！
 
 #### 主页：
 
