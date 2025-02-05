@@ -12,7 +12,7 @@
 - 端口指纹识别框架：[**`yqcs/fingerscan`**](https://github.com/yqcs/fingerscan) 
 
  <h1 align="center">
-    <img src="images/scan.png" width="95%" height="380">
+    <img src="images/scan.png" width="95%" >
 </h1>
 
 ### 运行命令
@@ -91,7 +91,7 @@ Usage of prismx_cli.exe:
 </Tree>
 
  <h1 align="center">
-    <img src="images/img.png" width="95%" height="380">
+    <img src="images/img.png" width="95%" >
 </h1>
 
 ### 编译
@@ -106,9 +106,9 @@ Tips: 推荐使用golang1.20版本进行编译（新版go不再支持windows 7�
 ## [**`深度定制: Prismx.io`**](https://prismx.io/)
 
  <h1 align="center"> 
-<a href="https://prismx.io/"><img src="https://prismx.io/static/pc_home.jpg"  width="90%" height="380"></a>
+<a href="https://prismx.io/"><img src="https://prismx.io/static/pc_home.jpg"  width="90%"></a>
 
-<a href="https://prismx.io/"><img src="https://prismx.io/static/view.jpg"  width="90%" height="380"></a>
+<a href="https://prismx.io/"><img src="https://prismx.io/static/view.jpg"  width="90%" ></a>
 </h1>
 
 #### 联系 / 定制（左） | 公众号：遮天实验室（右）
