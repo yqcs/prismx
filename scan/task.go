@@ -24,7 +24,6 @@ func (t *TaskPool) NewPoolWithFunc(pool *task.Pool, invoke func(), function func
 	invoke()
 	//实体队列堵塞
 	pool.Wg.Wait()
-	//释放锁
 	//清除任务
 	pool.PoolWithFunc.Release()
 }
