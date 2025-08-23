@@ -3,17 +3,16 @@ package main
 import (
 	"flag"
 	"fmt"
-	fingerprint "github.com/yqcs/fingerscan"
 	"os"
 	"prismx_cli/core/models"
 	"prismx_cli/scan"
-	"prismx_cli/utils/arr"
 	"prismx_cli/utils/logger"
 	"prismx_cli/utils/parse"
 	"prismx_cli/utils/reverse"
 	"prismx_cli/utils/task"
-	"strings"
 	"time"
+
+	fingerprint "github.com/yqcs/fingerscan"
 )
 
 var (
@@ -42,9 +41,9 @@ func init() {
 	blackPort = flag.String("bp", "", "Filter port for scan task")
 
 	pn = flag.Bool("pn", false, "Do not perform alive scan")
-	vul = flag.Bool("vul", true, "Detect security risks")
+	//vul = flag.Bool("vul", true, "Detect security risks")
 	ping = flag.Bool("ping", false, "ICMP or Ping mode operation,default ICMP")
-	weak = flag.Bool("weak", true, "Detect whether the common service has weak password")
+	//weak = flag.Bool("weak", true, "Detect whether the common service has weak password")
 	port = flag.String("p", "", "Ports to be scanned")
 	flag.Parse()
 }
