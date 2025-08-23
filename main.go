@@ -23,8 +23,8 @@ var (
 	mode      *string
 	subdomain *bool
 	ping      *bool
-	weak      *bool
-	vul       *bool
+	weak      bool
+	vul       bool
 	pn        *bool
 )
 
@@ -70,7 +70,7 @@ func main() {
 		logger.Fatal(err)
 	}
 
-	params := models.ScanParams{Uri: domainList, SubDomain: *subdomain, HostList: host, IP: *target, BlackIP: *blackIP, BlackPort: *blackPort, Ping: *ping, PN: *pn, WeakPass: *weak, Vul: *vul, PortList: parse.GetScanPort(*port, *blackPort)}
+	params := models.ScanParams{Uri: domainList, SubDomain: *subdomain, HostList: host, IP: *target, BlackIP: *blackIP, BlackPort: *blackPort, Ping: *ping, PN: *pn, WeakPass: weak, Vul: vul, PortList: parse.GetScanPort(*port, *blackPort)}
 
 	if *mode == "s" {
 		params.Thread = 800
