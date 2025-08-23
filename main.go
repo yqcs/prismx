@@ -34,45 +34,6 @@ func init() {
 	reverse.NewResolve()     //初始化dns
 	fingerprint.InitFinger() //初始化指纹
 
-	//初始化账号密码
-	password := strings.Split("123456,{user},,toor,qwe!2345,qwe!123,admin123,pass123,pass@123,password,123123,654321,111111,123,1,admin@123,Admin@123,admin123!@#,{user}1,{user}111,{user}123,{user}@123,{user}_123,{user}#123,{user}@111,{user}@2019,{user}@123#4,P@ssw0rd!,P@ssw0rd,Passw0rd,qwe123,12345678,test,test123,123qwe!@#,123456789,123321,666666,a123456.,123456~a,123456!a,000000,1234567890,8888888,!QAZ2wsx,1qaz2wsx,abc123,abc123456,1qaz@WSX,a11111,a12345,Aa1234,Aa1234.,Aa12345,a123456,a123123,Aa123123,Aa123456,Aa12345.,sysadmin,system,1qaz!QAZ,2wsx@WSX,qwe123!@#,Aa123456!,A123456s!,sa123456,1q2w3e", ",")
-
-	models.UserDict["ftp"] = strings.Split("ftp,admin,www,web,root,db,wwwroot,data,anonymous", ",")
-	models.PassDict["ftp"] = password
-	models.UserDict["mysql"] = strings.Split("root,mysql", ",")
-	models.PassDict["mysql"] = password
-	models.UserDict["ms-sql-s"] = strings.Split("sql,sa", ",")
-	models.PassDict["ms-sql-s"] = password
-	models.UserDict["microsoft-ds"] = strings.Split("administrator,admin,guest", ",")
-	models.PassDict["microsoft-ds"] = password
-	models.UserDict["postgresql"] = strings.Split("postgres,admin,root", ",")
-	models.PassDict["postgresql"] = password
-	models.UserDict["ssh"] = strings.Split("root,admin", ",")
-	models.PassDict["ssh"] = password
-	models.UserDict["oracle"] = strings.Split("system,aqadm,sys,scott", ",")
-	models.PassDict["oracle"] = password
-	models.UserDict["redis"] = strings.Split("", ",")
-	models.PassDict["redis"] = arr.DeleteSliceValue(password, "")
-	models.UserDict["telnet"] = strings.Split("admin,root", ",")
-	models.PassDict["telnet"] = password
-	models.UserDict["wsman"] = strings.Split("administrator,admin", ",")
-	models.PassDict["wsman"] = password
-	models.UserDict["wsmans"] = strings.Split("administrator,admin", ",")
-	models.PassDict["wsman"] = password
-	models.UserDict["ms-wbt-server"] = strings.Split("administrator,admin,test", ",")
-	models.PassDict["ms-wbt-server"] = password
-	models.UserDict["memcached"] = strings.Split("", ",")
-	models.PassDict["memcached"] = strings.Split("", ",")
-	models.UserDict["mongodb"] = strings.Split("", ",")
-	models.PassDict["mongodb"] = strings.Split("", ",")
-	models.UserDict["zookeeper"] = strings.Split("", ",")
-	models.PassDict["zookeeper"] = strings.Split("", ",")
-	models.UserDict["snmp"] = strings.Split("", ",")
-	models.PassDict["snmp"] = strings.Split("", ",")
-
-	models.UserDict["vnc"] = strings.Split("", ",")
-	models.PassDict["vnc"] = password
-
 	target = flag.String("t", "", "Scan task target")
 	subdomain = flag.Bool("s", false, "Scan subdomain, only applicable to the target containing domain")
 	mode = flag.String("m", "d", "Scan speed: s, d, f")
