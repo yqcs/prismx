@@ -2,7 +2,6 @@ package plugins
 
 import (
 	"embed"
-	"gopkg.in/yaml.v3"
 	"os"
 	"prismx_cli/core/hydra"
 	"prismx_cli/core/models"
@@ -10,17 +9,17 @@ import (
 	"prismx_cli/utils/file"
 	"prismx_cli/utils/logger"
 	"strings"
+
+	"gopkg.in/yaml.v3"
 )
 
 var (
 	WeakPass []models.HydraAppFunc
-	//go:embed exploits
+	//go:embed exploits/*
 	webApi embed.FS
 )
 
 func init() {
-
-	//go reverse.NewResolve() //初始化dns
 
 	WeakPass = []models.HydraAppFunc{
 		{App: "vnc", Func: hydra.VncWeakPass},
@@ -178,8 +177,8 @@ func LoadEmbedYAML(s string) models.AppVulInfo {
 		return models.AppVulInfo{}
 	}
 	u := models.AppVulInfo{}
-	//u.Meta.Steps.VerifySteps.Verify = []models.StepMeta{}
-	//u.Meta.Steps.ExploitSteps.Exploit = []models.StepsMate{}
+	u.Meta.Steps.VerifySteps.Verify = []models.StepMeta{}
+	u.Meta.Steps.ExploitSteps.Exploit = []models.StepMeta{}
 	if err = yaml.Unmarshal(readFile, &u); err != nil {
 		logger.Error(err.Error())
 	}
