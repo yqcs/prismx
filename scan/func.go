@@ -35,46 +35,69 @@ func (t *TaskPool) TaskInChan() {
 	var wg sync.WaitGroup
 
 	// ==========================================
-	// 阶段1: 主机存活扫描
+	// 阶段1a: 子域名枚举
+	// ==========================================
+
+	if t.Params.SubDomain {
+		logger.Info(logger.Global.Color().Yellow("开始子域名枚举..."))
+
+		var (
+			domainResults      []string
+			domainResultsMutex sync.Mutex
+		)
+		domainChan := make(chan string, 50)
+
+		for i := 0; i < 50; i++ {
+			wg.Add(1)
+			go func() {
+				defer wg.Done()
+				for host := range domainChan {
+					if !parse.IsDomain(host) {
+						continue
+					}
+					enumeration, err := runner.RunEnumeration(runner.Runner{Target: host, Timeout: t.Params.Timeout})
+					if err != nil {
+						continue
+					}
+					for _, item := range enumeration {
+						if item.Value != "" && !strings.Contains(item.Value, "*") && !arr.IsContain(hostList, item.Value) {
+							domainResultsMutex.Lock()
+							domainResults = append(domainResults, item.Value)
+							domainResultsMutex.Unlock()
+						}
+					}
+				}
+			}()
+		}
+
+		for _, host := range hostList {
+			domainChan <- host
+		}
+		close(domainChan)
+		wg.Wait()
+		hostList = append(hostList, domainResults...)
+	}
+
+	hostList = arr.SliceRemoveDuplicates(hostList)
+
+	// ==========================================
+	// 阶段1b: 主机存活扫描
 	// ==========================================
 	logger.Info(logger.Global.Color().Yellow(fmt.Sprintf("[阶段1/5] 开始主机存活扫描，共 %d 个目标", len(hostList))))
 
 	var aliveHosts []string
 	var aliveHostsMutex sync.Mutex
 
-	hostChan := make(chan string, t.Params.Thread)
+	hostChan := make(chan string, 300)
 
-	for i := 0; i < t.Params.Thread; i++ {
+	for i := 0; i < 300; i++ {
 		wg.Add(1)
 		go func() {
 			defer wg.Done()
 			for host := range hostChan {
-				// 判断是不是域名
-				if !parse.IsDomain(host) {
-					if t.Params.PN || aliveCheck.HostAliveCheck(host, t.Params.Ping, t.Params.Timeout, t.Params.AliveFuzz) {
-						aliveHostsMutex.Lock()
-						aliveHosts = append(aliveHosts, host)
-						aliveHostsMutex.Unlock()
-					}
-					continue
-				}
-
-				// 扫描子域名
-				if t.Params.SubDomain {
-					var domainList []string
-					enumeration, _ := runner.RunEnumeration(runner.Runner{Target: host, Timeout: t.Params.Timeout})
-					for _, item := range enumeration {
-						if item.Value != "" && !strings.Contains(item.Value, "*") && !arr.IsContain(hostList, item.Value) && !arr.IsContain(domainList, item.Value) {
-							domainList = append(domainList, item.Value)
-						}
-					}
-					aliveHostsMutex.Lock()
-					aliveHosts = append(aliveHosts, domainList...)
-					aliveHostsMutex.Unlock()
-				}
-
-				// 扫描域名本身
 				if t.Params.PN || aliveCheck.HostAliveCheck(host, t.Params.Ping, t.Params.Timeout, t.Params.AliveFuzz) {
+					wsMsg := logger.Global.Color().Green(fmt.Sprintf("%-"+strconv.Itoa(20)+"s", host)) + "	" + "[" + logger.Global.Color().Yellow("Alive") + "]"
+					logger.ScanMessage(wsMsg)
 					aliveHostsMutex.Lock()
 					aliveHosts = append(aliveHosts, host)
 					aliveHostsMutex.Unlock()
@@ -83,23 +106,15 @@ func (t *TaskPool) TaskInChan() {
 		}()
 	}
 
-	// 发送任务
 	for _, host := range hostList {
 		hostChan <- host
 	}
 	close(hostChan)
 	wg.Wait()
 
-	// 去重存活主机列表
 	aliveHosts = arr.SliceRemoveDuplicates(aliveHosts)
 	logger.Info(logger.Global.Color().Green(fmt.Sprintf("[阶段1/5] 主机存活扫描完成，存活 %d 台", len(aliveHosts))))
-
-	if len(aliveHosts) != 0 {
-		for _, host := range aliveHosts {
-			wsMsg := logger.Global.Color().Green(fmt.Sprintf("%-"+strconv.Itoa(20)+"s", host)) + "	" + "[" + logger.Global.Color().Yellow("Alive") + "]"
-			logger.ScanMessage(wsMsg)
-		}
-	} else {
+	if len(aliveHosts) == 0 {
 		logger.Info(logger.Global.Color().Yellow("没有存活主机，扫描结束"))
 		return
 	}
