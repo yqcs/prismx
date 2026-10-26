@@ -11,11 +11,13 @@ import (
 	"github.com/yqcs/prismx/utils/file"
 	"github.com/yqcs/prismx/utils/logger"
 	"gopkg.in/yaml.v3"
+
+	"gopkg.in/yaml.v3"
 )
 
 var (
 	WeakPass []models.HydraAppFunc
-	//go:embed exploits
+	//go:embed exploits/*
 	webApi embed.FS
 )
 
@@ -131,7 +133,7 @@ func LoadGo(s string) {
 	//}
 	//
 	//err := intp.Use(map[string]map[string]reflect.Value{
-	//	"github.com/yqcs/prismx/models/models": { //导入models
+	//	"prismx_cli/models/models": { //导入models
 	//		"Register":      reflect.ValueOf(models.Register), //函数类型
 	//		"HydraAppFunc":  reflect.ValueOf((*models.HydraAppFunc)(nil)),
 	//		"VulResult":     reflect.ValueOf((*models.VulResult)(nil)),
@@ -142,18 +144,18 @@ func LoadGo(s string) {
 	//		"ExploitSteps":  reflect.ValueOf((*models.ExploitSteps)(nil)),
 	//		"ExploitParams": reflect.ValueOf((*models.ExploitParams)(nil)),
 	//	},
-	//	"github.com/yqcs/prismx/utils/netUtils/netUtils": { //导入netutils
+	//	"prismx_cli/utils/netUtils/netUtils": { //导入netutils
 	//		"SendHttp":        reflect.ValueOf(netUtils.SendHttp),
 	//		"SendDialTimeout": reflect.ValueOf(netUtils.SendDialTimeout),
 	//		"OpenProxy":       reflect.ValueOf(netUtils.OpenProxy),
 	//		"CloseProxy":      reflect.ValueOf(netUtils.CloseProxy),
 	//		"Result":          reflect.ValueOf((*netUtils.Result)(nil)),
 	//	},
-	//	"github.com/yqcs/prismx/utils/randomUtil/randomUtil": { //导出utils包
+	//	"prismx_cli/utils/randomUtil/randomUtil": { //导出utils包
 	//		"RandomString": reflect.ValueOf(randomUtils.RandomString),
 	//		"GetUserAgent": reflect.ValueOf(randomUtils.GetUserAgent),
 	//	},
-	//	"github.com/yqcs/prismx/utils/reverse/reverse": { //导入反连包
+	//	"prismx_cli/utils/reverse/reverse": { //导入反连包
 	//		"CheckResolveState": reflect.ValueOf(reverse.CheckResolveState),
 	//		"GetResolveUrl":     reflect.ValueOf(reverse.GetResolveUrl),
 	//	},

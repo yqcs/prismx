@@ -8,7 +8,8 @@ import (
 	"time"
 )
 
-// PortCheck 尝试连接到指定地址的端口，返回是否成功
+// PortCheck 端口存活检测（传统全连接模式）
+// SYN 高速扫描请使用 SynScanner 批量扫描接口
 func PortCheck(addr string, timeout time.Duration) bool {
 	conn, err := net.DialTimeout("tcp", addr, timeout)
 	if err != nil {

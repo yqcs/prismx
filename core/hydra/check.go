@@ -6,6 +6,7 @@ import (
 	"net"
 	"strconv"
 	"strings"
+	"sync/atomic"
 	"time"
 
 	"github.com/panjf2000/ants/v2"
@@ -24,7 +25,7 @@ func (c *proxyDialer) DialContext(ctx context.Context, network, addr string) (ne
 	return netUtils.SendDialTimeout(network, addr, c.timeout)
 }
 
-func RunCheck(captureHydra func(id string, target, app string, msg models.MSG), t *models.HydraTask, app models.HydraAppFunc) {
+func RunCheck(t *models.HydraTask, app models.HydraAppFunc) {
 
 	if len(models.UserDict[app.App]) != 0 && len(models.PassDict[app.App]) == 0 {
 		//有用户名无密码的情况
@@ -47,44 +48,59 @@ func RunCheck(captureHydra func(id string, target, app string, msg models.MSG), 
 			}
 		}
 	}
-	t.Scan = task.NewPool()
-	t.Scan.PoolWithFunc, _ = ants.NewPoolWithFunc(30, func(i interface{}) {
-		defer t.Scan.Wg.Done()
 
-		ctx, cancel := context.WithTimeout(context.Background(), t.Config.Timeout)
-		defer cancel()
+	// 创建弱密码爆破池，固定 30 并发
+	t.Scan = task.NewPool(100)
 
-		done := make(chan any)
-
-		go func() {
-			done <- app.Func(i)
-		}()
-
-		select {
-		case <-ctx.Done():
-			return
-		case out := <-done:
-			if out != nil {
-				data := out.(models.MSG)
-				account := data.Payload.(models.Dict)
-				if captureHydra != nil {
-					captureHydra(t.Config.TaskID, t.Target, t.App, out.(models.MSG))
-				}
-				if data.Type == "Unauthorized" {
-					logger.ScanMessage(logger.Global.Color().Green(fmt.Sprintf("%-"+strconv.Itoa(20)+"s", t.Target)) + fmt.Sprintf(" [%s] Detect Unauthorized access", logger.Global.Color().YellowBg(app.App)))
-				} else {
-					logger.ScanMessage(logger.Global.Color().Green(fmt.Sprintf("%-"+strconv.Itoa(20)+"s", t.Target)) + fmt.Sprintf(" [%s] Detect Weak Password. Login: %s, Password: %s", logger.Global.Color().YellowBg(app.App), logger.Global.Color().Red(account.User), logger.Global.Color().Red(account.Password)))
-				}
-			}
-			close(done)
-		}
-	})
+	// 找到弱密码的终止标记，找到第一个后立即终止剩余任务
+	var found uint32
 
 	for _, item := range t.DictList {
-		t.Scan.Wg.Add(1)
-		t.Dict = item
-		t.Scan.PoolWithFunc.Invoke(*t)
+		// 先检查是否已找到正确密码，找到就跳过剩余任务
+		if atomic.LoadUint32(&found) == 1 {
+			break
+		}
+
+		dict := item
+		t.Scan.Go(func() {
+			// 每个任务开始前再检查一次，避免已找到后还继续执行
+			if atomic.LoadUint32(&found) == 1 {
+				return
+			}
+
+			// 创建任务副本，避免并发修改 t.Dict 导致数据竞争
+			task := *t
+			task.Dict = dict
+
+			ctx, cancel := context.WithTimeout(context.Background(), t.Config.Timeout)
+			defer cancel()
+
+			done := make(chan any, 1) // 带缓冲，确保发送不阻塞
+
+			go func() {
+				defer func() { _ = recover() }() // 内层 goroutine 也加 panic 保护
+				done <- app.Func(task)
+			}()
+
+			select {
+			case <-ctx.Done():
+				return
+			case out := <-done:
+				if out != nil {
+					// 标记已找到，让后续任务快速跳过
+					atomic.StoreUint32(&found, 1)
+
+					data := out.(models.MSG)
+					account := data.Payload.(models.Dict)
+					if data.Type == "Unauthorized" {
+						logger.ScanMessage(logger.Global.Color().Green(fmt.Sprintf("%-"+strconv.Itoa(20)+"s", t.Target)) + fmt.Sprintf(" [%s] Detect Unauthorized access", logger.Global.Color().YellowBg(app.App)))
+					} else {
+						logger.ScanMessage(logger.Global.Color().Green(fmt.Sprintf("%-"+strconv.Itoa(20)+"s", t.Target)) + fmt.Sprintf(" [%s] Detect Weak Password. Login: %s, Password: %s", logger.Global.Color().YellowBg(app.App), logger.Global.Color().Red(account.User), logger.Global.Color().Red(account.Password)))
+					}
+				}
+			}
+		})
 	}
-	t.Scan.Wg.Wait()
-	t.Scan.PoolWithFunc.Release()
+
+	t.Scan.Wait()
 }
