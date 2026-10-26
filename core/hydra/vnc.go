@@ -2,8 +2,8 @@ package hydra
 
 import (
 	"context"
-
 	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/go-vnc"
 	"github.com/yqcs/prismx/utils/netUtils"
 )
 

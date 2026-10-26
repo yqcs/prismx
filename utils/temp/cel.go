@@ -3,6 +3,11 @@ package temp
 import (
 	"bytes"
 	"encoding/base64"
+	"math/rand"
+	"net/url"
+	"regexp"
+	"strings"
+
 	"github.com/google/cel-go/cel"
 	"github.com/google/cel-go/checker/decls"
 	"github.com/google/cel-go/common/types"
@@ -11,10 +16,6 @@ import (
 	"github.com/yqcs/prismx/utils/cryptoPlus"
 	"github.com/yqcs/prismx/utils/randomUtils"
 	exprpb "google.golang.org/genproto/googleapis/api/expr/v1alpha1"
-	"math/rand"
-	"net/url"
-	"regexp"
-	"strings"
 )
 
 type CustomLib struct {

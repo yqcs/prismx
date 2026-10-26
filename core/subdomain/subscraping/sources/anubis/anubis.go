@@ -5,9 +5,8 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"io"
-
 	"github.com/yqcs/prismx/core/subdomain/subscraping"
+	"io"
 )
 
 // Source is the passive scraping agent

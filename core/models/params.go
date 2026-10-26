@@ -27,7 +27,6 @@ type HydraTask struct {
 }
 
 type ScanParams struct {
-	TaskID                                                            string        //任务唯一ID
 	IP, Port, BlackPort, BlackIP                                      string        //要检查的IP、端口以及黑名单
 	Timeout                                                           time.Duration //网络超时
 	Thread                                                            int           //线程数

@@ -3,7 +3,6 @@ package x224
 import (
 	"bytes"
 	"errors"
-
 	"github.com/lunixbochs/struc"
 	"github.com/yqcs/prismx/utils/go-rdp/core"
 	"github.com/yqcs/prismx/utils/go-rdp/emission"

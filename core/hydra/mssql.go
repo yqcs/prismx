@@ -3,10 +3,11 @@ package hydra
 import (
 	"database/sql"
 	"fmt"
+	"net"
+
 	_ "github.com/denisenkom/go-mssqldb"
 	mssql "github.com/denisenkom/go-mssqldb"
 	"github.com/yqcs/prismx/core/models"
-	"net"
 )
 
 func MSSQLWeakPass(res any) any {

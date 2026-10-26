@@ -51,7 +51,6 @@ require (
 	github.com/zcalusic/sysinfo v1.0.2
 	github.com/zmap/zcrypto v0.0.0-20230422215203-9a665e1e9968
 	go.mongodb.org/mongo-driver v1.17.1
-	go.uber.org/automaxprocs v1.6.0
 	go.uber.org/multierr v1.11.0
 	go.uber.org/ratelimit v0.3.1
 	golang.org/x/crypto v0.48.0

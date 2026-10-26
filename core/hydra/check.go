@@ -9,7 +9,6 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/panjf2000/ants/v2"
 	"github.com/yqcs/prismx/core/models"
 	"github.com/yqcs/prismx/utils/logger"
 	"github.com/yqcs/prismx/utils/netUtils"

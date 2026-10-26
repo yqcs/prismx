@@ -3,6 +3,9 @@ package go_ora
 import (
 	"errors"
 	"fmt"
+	"github.com/yqcs/prismx/utils/go-ora/advanced_nego"
+	"github.com/yqcs/prismx/utils/go-ora/network"
+	"github.com/yqcs/prismx/utils/go-ora/trace"
 	"net"
 	"net/url"
 	"os"
@@ -12,10 +15,6 @@ import (
 	"strconv"
 	"strings"
 	"time"
-
-	"github.com/yqcs/prismx/utils/go-ora/advanced_nego"
-	"github.com/yqcs/prismx/utils/go-ora/network"
-	"github.com/yqcs/prismx/utils/go-ora/trace"
 )
 
 type PromotableTransaction int

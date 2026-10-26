@@ -3,9 +3,8 @@ package cryptoPlus
 import (
 	"crypto/md5"
 	"fmt"
-	"io"
-
 	"github.com/yqcs/prismx/utils/logger"
+	"io"
 )
 
 func ToMD5(str string) string {

@@ -1,16 +1,15 @@
 package fileIncloud
 
 import (
+	"github.com/yqcs/prismx/core"
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/core/owaspTop10/utils"
+	"github.com/yqcs/prismx/utils/netUtils"
 	"net/http"
 	"net/url"
 	"strconv"
 	"strings"
 	"time"
-
-	"github.com/yqcs/prismx/core"
-	"github.com/yqcs/prismx/core/models"
-	"github.com/yqcs/prismx/core/owaspTop10/utils"
-	"github.com/yqcs/prismx/utils/netUtils"
 )
 
 func Start(id string, target *url.URL, timeout time.Duration) {
