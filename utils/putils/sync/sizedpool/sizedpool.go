@@ -5,7 +5,7 @@ import (
 	"errors"
 	"sync"
 
-	"prismx_cli/utils/putils/sync/semaphore"
+	"github.com/yqcs/prismx/utils/putils/sync/semaphore"
 )
 
 type PoolOption[T any] func(*SizedPool[T]) error

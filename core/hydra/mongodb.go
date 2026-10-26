@@ -3,10 +3,11 @@ package hydra
 import (
 	"context"
 	"fmt"
+
+	"github.com/yqcs/prismx/core/models"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.mongodb.org/mongo-driver/mongo/readpref"
-	"prismx_cli/core/models"
 )
 
 func MongodbWeakPass(res any) any {

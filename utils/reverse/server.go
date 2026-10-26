@@ -1,12 +1,13 @@
 package reverse
 
 import (
-	"prismx_cli/utils/interactsh/pkg/client"
-	"prismx_cli/utils/interactsh/pkg/server"
-	"prismx_cli/utils/randomUtils"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/yqcs/prismx/utils/interactsh/pkg/client"
+	"github.com/yqcs/prismx/utils/interactsh/pkg/server"
+	"github.com/yqcs/prismx/utils/randomUtils"
 )
 
 type DnsServer struct {

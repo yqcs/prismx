@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"prismx_cli/utils/putils/reader"
-	stringsutil "prismx_cli/utils/putils/strings"
+	"github.com/yqcs/prismx/utils/putils/reader"
+	stringsutil "github.com/yqcs/prismx/utils/putils/strings"
 )
 
 func main() {

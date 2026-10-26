@@ -14,7 +14,7 @@ import (
 	"golang.org/x/text/encoding/simplifiedchinese"
 	"golang.org/x/text/transform"
 
-	stringsutil "prismx_cli/utils/putils/strings"
+	stringsutil "github.com/yqcs/prismx/utils/putils/strings"
 )
 
 // readNNormalizeRespBody performs normalization on the http response object.

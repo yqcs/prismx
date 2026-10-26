@@ -18,9 +18,9 @@ import (
 
 	"github.com/asaskevich/govalidator"
 	"github.com/pkg/errors"
+	sliceutil "github.com/yqcs/prismx/utils/putils/slice"
+	stringsutil "github.com/yqcs/prismx/utils/putils/strings"
 	"gopkg.in/yaml.v3"
-	sliceutil "prismx_cli/utils/putils/slice"
-	stringsutil "prismx_cli/utils/putils/strings"
 )
 
 // FileExists checks if the file exists in the provided path

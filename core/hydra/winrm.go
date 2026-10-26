@@ -2,12 +2,13 @@ package hydra
 
 import (
 	"context"
-	"github.com/masterzen/winrm"
 	"net"
 	"os"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/netUtils"
 	"strconv"
+
+	"github.com/masterzen/winrm"
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/netUtils"
 )
 
 func WinRMWeakPass(res any) any {

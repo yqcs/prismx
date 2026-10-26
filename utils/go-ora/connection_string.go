@@ -8,13 +8,14 @@ import (
 	"os"
 	"os/user"
 	"path"
-	"prismx_cli/utils/go-ora/advanced_nego"
-	"prismx_cli/utils/go-ora/network"
-	"prismx_cli/utils/go-ora/trace"
 	"runtime"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/yqcs/prismx/utils/go-ora/advanced_nego"
+	"github.com/yqcs/prismx/utils/go-ora/network"
+	"github.com/yqcs/prismx/utils/go-ora/trace"
 )
 
 type PromotableTransaction int

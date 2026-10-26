@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"strings"
 
-	mapsutil "prismx_cli/utils/putils/maps"
+	mapsutil "github.com/yqcs/prismx/utils/putils/maps"
 )
 
 // Only difference between OrderedParams and Params is that

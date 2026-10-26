@@ -11,9 +11,9 @@ import (
 	"strings"
 
 	"github.com/pkg/errors"
+	sliceutil "github.com/yqcs/prismx/utils/putils/slice"
+	stringsutil "github.com/yqcs/prismx/utils/putils/strings"
 	"go.uber.org/multierr"
-	sliceutil "prismx_cli/utils/putils/slice"
-	stringsutil "prismx_cli/utils/putils/strings"
 )
 
 // New creates a routing engine for Darwin

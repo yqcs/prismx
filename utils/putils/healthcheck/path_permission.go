@@ -3,7 +3,7 @@ package healthcheck
 import (
 	"errors"
 
-	fileutil "prismx_cli/utils/putils/file"
+	fileutil "github.com/yqcs/prismx/utils/putils/file"
 )
 
 type PathPermission struct {

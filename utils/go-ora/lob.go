@@ -4,7 +4,8 @@ import (
 	"bytes"
 	"errors"
 	"go/types"
-	"prismx_cli/utils/go-ora/converters"
+
+	"github.com/yqcs/prismx/utils/go-ora/converters"
 )
 
 type Clob struct {

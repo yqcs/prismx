@@ -2,9 +2,10 @@ package hydra
 
 import (
 	"net"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/go-ora"
 	"strconv"
+
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/go-ora"
 )
 
 func OracleWeakPass(res any) any {

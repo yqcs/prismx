@@ -3,17 +3,18 @@ package jsFind
 import (
 	"crypto/tls"
 	"embed"
-	"github.com/gocolly/colly"
-	"gopkg.in/yaml.v3"
 	"net/http"
 	"net/url"
-	"prismx_cli/utils/arr"
-	"prismx_cli/utils/logger"
-	"prismx_cli/utils/netUtils"
-	"prismx_cli/utils/randomUtils"
 	"regexp"
 	"sync"
 	"time"
+
+	"github.com/gocolly/colly"
+	"github.com/yqcs/prismx/utils/arr"
+	"github.com/yqcs/prismx/utils/logger"
+	"github.com/yqcs/prismx/utils/netUtils"
+	"github.com/yqcs/prismx/utils/randomUtils"
+	"gopkg.in/yaml.v3"
 )
 
 type JsFind struct {

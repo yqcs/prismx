@@ -1,9 +1,10 @@
 package runner
 
 import (
-	"prismx_cli/core/subdomain/passive"
-	"prismx_cli/core/subdomain/subscraping"
 	"time"
+
+	"github.com/yqcs/prismx/core/subdomain/passive"
+	"github.com/yqcs/prismx/core/subdomain/subscraping"
 )
 
 type Runner struct {

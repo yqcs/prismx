@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/yqcs/prismx/utils/putils/consts"
+	osutil "github.com/yqcs/prismx/utils/putils/os"
+	stringsutil "github.com/yqcs/prismx/utils/putils/strings"
 	"go.uber.org/multierr"
-	"prismx_cli/utils/putils/consts"
-	osutil "prismx_cli/utils/putils/os"
-	stringsutil "prismx_cli/utils/putils/strings"
 )
 
 var (

@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"prismx_cli/utils/putils/channelutil"
+	"github.com/yqcs/prismx/utils/putils/channelutil"
 )
 
 var debug bool = false

@@ -7,8 +7,8 @@ import (
 	"io"
 
 	"github.com/lunixbochs/struc"
-	"prismx_cli/utils/go-rdp/core"
-	"prismx_cli/utils/go-rdp/protocol/t125/gcc"
+	"github.com/yqcs/prismx/utils/go-rdp/core"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/t125/gcc"
 )
 
 type CapsType uint16

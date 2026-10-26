@@ -13,11 +13,12 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"prismx_cli/utils/go-ora/network"
-	"prismx_cli/utils/go-ora/network/security"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/yqcs/prismx/utils/go-ora/network"
+	"github.com/yqcs/prismx/utils/go-ora/network/security"
 )
 
 // E infront of the variable means encrypted

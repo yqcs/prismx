@@ -3,7 +3,8 @@ package advanced_nego
 import (
 	"errors"
 	"fmt"
-	"prismx_cli/utils/go-ora/network/security"
+
+	"github.com/yqcs/prismx/utils/go-ora/network/security"
 )
 
 type encryptService struct {

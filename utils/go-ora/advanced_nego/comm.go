@@ -2,7 +2,8 @@ package advanced_nego
 
 import (
 	"errors"
-	"prismx_cli/utils/go-ora/network"
+
+	"github.com/yqcs/prismx/utils/go-ora/network"
 )
 
 type AdvancedNegoComm struct {

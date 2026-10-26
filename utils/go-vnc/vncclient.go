@@ -11,8 +11,8 @@ import (
 	"net"
 	"reflect"
 
+	"github.com/yqcs/prismx/utils/go-vnc/go/metrics"
 	"golang.org/x/net/context"
-	"prismx_cli/utils/go-vnc/go/metrics"
 )
 
 // Connect negotiates a connection to a VNC server.

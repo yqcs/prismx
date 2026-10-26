@@ -2,10 +2,11 @@ package passive
 
 import (
 	"context"
-	"prismx_cli/core/subdomain/subscraping"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/yqcs/prismx/core/subdomain/subscraping"
 )
 
 // EnumerateSubdomains enumerates all the subdomains for a given domain

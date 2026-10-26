@@ -15,15 +15,16 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"prismx_cli/utils/interactsh/pkg/server"
-	"prismx_cli/utils/interactsh/pkg/storage"
-	errorutil "prismx_cli/utils/putils/errors"
-	sliceutil "prismx_cli/utils/putils/slice"
-	stringsutil "prismx_cli/utils/putils/strings"
 	"strings"
 	"sync"
 	"sync/atomic"
 	"time"
+
+	"github.com/yqcs/prismx/utils/interactsh/pkg/server"
+	"github.com/yqcs/prismx/utils/interactsh/pkg/storage"
+	errorutil "github.com/yqcs/prismx/utils/putils/errors"
+	sliceutil "github.com/yqcs/prismx/utils/putils/slice"
+	stringsutil "github.com/yqcs/prismx/utils/putils/strings"
 
 	"errors"
 

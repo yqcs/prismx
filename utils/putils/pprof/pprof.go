@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"prismx_cli/utils/putils/env"
+	"github.com/yqcs/prismx/utils/putils/env"
 )
 
 const (

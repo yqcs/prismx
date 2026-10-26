@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"prismx_cli/utils/putils/reader/rawmode"
+	"github.com/yqcs/prismx/utils/putils/reader/rawmode"
 )
 
 type KeyPressReader struct {

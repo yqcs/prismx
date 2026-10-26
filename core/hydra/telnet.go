@@ -1,8 +1,7 @@
 package hydra
 
 import (
-	"prismx_cli/core/models"
-	"prismx_cli/utils/go-telnet"
+	"github.com/yqcs/prismx/core/models"
 )
 
 func TelnetWeakPass(res any) any {

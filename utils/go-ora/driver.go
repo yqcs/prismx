@@ -9,7 +9,7 @@ import (
 	"strings"
 	"sync"
 
-	"prismx_cli/utils/go-ora/converters"
+	"github.com/yqcs/prismx/utils/go-ora/converters"
 )
 
 type OracleDriver struct {

@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"prismx_cli/utils/putils/consts"
-	osutils "prismx_cli/utils/putils/os"
+	"github.com/yqcs/prismx/utils/putils/consts"
+	osutils "github.com/yqcs/prismx/utils/putils/os"
 )
 
 func TestTryExtendIP(t *testing.T) {

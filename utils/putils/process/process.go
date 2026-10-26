@@ -2,7 +2,7 @@ package process
 
 import (
 	ps "github.com/shirou/gopsutil/v3/process"
-	stringsutil "prismx_cli/utils/putils/strings"
+	stringsutil "github.com/yqcs/prismx/utils/putils/strings"
 )
 
 // CloseProcesses part

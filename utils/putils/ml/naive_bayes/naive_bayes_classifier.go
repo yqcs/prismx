@@ -13,8 +13,8 @@ import (
 	"strings"
 
 	"github.com/kljensen/snowball"
-	mlutils "prismx_cli/utils/putils/ml"
-	"prismx_cli/utils/putils/ml/metrics"
+	mlutils "github.com/yqcs/prismx/utils/putils/ml"
+	"github.com/yqcs/prismx/utils/putils/ml/metrics"
 )
 
 var (

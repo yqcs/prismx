@@ -1,9 +1,9 @@
 package hydra
 
 import (
-	"prismx_cli/core/models"
-	"prismx_cli/utils/go-snmp"
-	"prismx_cli/utils/netUtils"
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/go-snmp"
+	"github.com/yqcs/prismx/utils/netUtils"
 )
 
 func SNMPWeakPass(res any) any {

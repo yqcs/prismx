@@ -2,8 +2,8 @@ package hydra
 
 import (
 	"github.com/hirochachacha/go-smb2"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/netUtils"
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/netUtils"
 )
 
 func SMBWeakPass(res any) any {

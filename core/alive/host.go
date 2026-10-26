@@ -1,14 +1,15 @@
-package aliveCheck
+package alive
 
 import (
-	"golang.org/x/net/icmp"
 	"net"
 	"os/exec"
 	"os/user"
-	"prismx_cli/utils/netUtils"
 	"runtime"
 	"strings"
 	"time"
+
+	"github.com/yqcs/prismx/utils/netUtils"
+	"golang.org/x/net/icmp"
 )
 
 // HostAliveCheck 主机存活检测
@@ -51,7 +52,6 @@ func RunIcmpLocal(ip string, conn *icmp.PacketConn) bool {
 			}
 		}
 	}()
-
 	_, err = conn.WriteTo(makeMsg(ip), dst)
 	if err != nil {
 		return false

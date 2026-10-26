@@ -2,19 +2,20 @@ package sqli
 
 import (
 	"embed"
-	"github.com/beevik/etree"
 	"io"
 	"net/http"
 	"net/url"
-	"prismx_cli/core"
-	"prismx_cli/core/models"
-	"prismx_cli/core/owaspTop10/utils"
-	"prismx_cli/utils/arr"
-	"prismx_cli/utils/netUtils"
-	"prismx_cli/utils/randomUtils"
 	"regexp"
 	"strconv"
 	"time"
+
+	"github.com/beevik/etree"
+	"github.com/yqcs/prismx/core"
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/core/owaspTop10/utils"
+	"github.com/yqcs/prismx/utils/arr"
+	"github.com/yqcs/prismx/utils/netUtils"
+	"github.com/yqcs/prismx/utils/randomUtils"
 )
 
 //go:embed data

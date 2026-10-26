@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/docker/go-units"
-	contextutil "prismx_cli/utils/putils/context"
-	errorutil "prismx_cli/utils/putils/errors"
+	contextutil "github.com/yqcs/prismx/utils/putils/context"
+	errorutil "github.com/yqcs/prismx/utils/putils/errors"
 )
 
 var (

@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"time"
 
-	"prismx_cli/utils/go-ora/converters"
+	"github.com/yqcs/prismx/utils/go-ora/converters"
 )
 
 //func (par *ParameterInfo) setForNull() {

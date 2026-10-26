@@ -2,8 +2,9 @@ package hydra
 
 import (
 	"bytes"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/netUtils"
+
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/netUtils"
 )
 
 func ZookeeperWeakPass(res any) any {

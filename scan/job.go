@@ -2,23 +2,24 @@ package scan
 
 import (
 	"fmt"
-	"github.com/panjf2000/ants/v2"
-	fingerprint "github.com/yqcs/fingerscan"
 	"net"
-	"prismx_cli/core/aliveCheck"
-	"prismx_cli/core/hydra"
-	"prismx_cli/core/models"
-	"prismx_cli/core/plugins"
-	"prismx_cli/core/subdomain/runner"
-	"prismx_cli/core/vulnerability"
-	"prismx_cli/utils/arr"
-	"prismx_cli/utils/logger"
-	"prismx_cli/utils/parse"
-	"prismx_cli/utils/task"
 	"strconv"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/panjf2000/ants/v2"
+	fingerprint "github.com/yqcs/fingerscan"
+	"github.com/yqcs/prismx/core/alive"
+	"github.com/yqcs/prismx/core/hydra"
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/core/plugins"
+	"github.com/yqcs/prismx/core/subdomain/runner"
+	"github.com/yqcs/prismx/core/vulnerability"
+	"github.com/yqcs/prismx/utils/arr"
+	"github.com/yqcs/prismx/utils/logger"
+	"github.com/yqcs/prismx/utils/parse"
+	"github.com/yqcs/prismx/utils/task"
 )
 
 // TaskInChan 下达任务前置操作
@@ -46,7 +47,10 @@ func (t *TaskPool) TaskInChan() {
 
 		//判断是不是域名，并下发任务
 		if !parse.IsDomain(host) {
-			if t.Params.PN || aliveCheck.HostAliveCheck(host, t.Params.Ping, t.Params.Timeout, t.Params.AliveFuzz) {
+			if t.Params.PN || alive.HostAliveCheck(host, t.Params.Ping, t.Params.Timeout, t.Params.AliveFuzz) {
+				if CaptureHost != nil {
+					CaptureHost(t.Params.TaskID, host)
+				}
 				t.InvokeTask(host)
 			}
 			return
@@ -63,7 +67,8 @@ func (t *TaskPool) TaskInChan() {
 				enumeration, _ := runner.RunEnumeration(runner.Runner{Target: domain, Timeout: t.Params.Timeout})
 				//处理重复域名
 				for _, item := range enumeration {
-					if item.Value != "" && !strings.Contains(item.Value, "*") && !arr.IsContain(hostList, item.Value) && !arr.IsContain(domainList, item.Value) {
+					if item.Value != "" && !strings.Contains(item.Value, "*") &&
+						!arr.IsContain(hostList, item.Value) && !arr.IsContain(domainList, item.Value) {
 						domainList = append(domainList, item.Value)
 					}
 				}
@@ -71,7 +76,10 @@ func (t *TaskPool) TaskInChan() {
 				for _, item := range domainList {
 					go func(ipItem string) {
 						defer t.Scan.Wg.Done()
-						if t.Params.PN || aliveCheck.HostAliveCheck(ipItem, t.Params.Ping, t.Params.Timeout, t.Params.AliveFuzz) {
+						if t.Params.PN || alive.HostAliveCheck(ipItem, t.Params.Ping, t.Params.Timeout, t.Params.AliveFuzz) {
+							if CaptureHost != nil {
+								CaptureHost(t.Params.TaskID, host)
+							}
 							//下发端口扫描任务
 							t.InvokeTask(ipItem)
 						}
@@ -81,7 +89,10 @@ func (t *TaskPool) TaskInChan() {
 		}
 
 		//扫描域名
-		if t.Params.PN || aliveCheck.HostAliveCheck(host, t.Params.Ping, t.Params.Timeout, t.Params.AliveFuzz) {
+		if t.Params.PN || alive.HostAliveCheck(host, t.Params.Ping, t.Params.Timeout, t.Params.AliveFuzz) {
+			if CaptureHost != nil {
+				CaptureHost(t.Params.TaskID, host)
+			}
 			//下发端口扫描任务
 			t.InvokeTask(host)
 		}
@@ -108,7 +119,7 @@ func (t *TaskPool) TaskFunc(i any) {
 	//--------------------扫描主机存活--------------------------
 
 	//检测存活端口
-	if !aliveCheck.PortCheck(i.(string), t.Params.Timeout) {
+	if !alive.PortCheck(i.(string), t.Params.Timeout) {
 		return
 	}
 	host, port, err := net.SplitHostPort(i.(string))
@@ -149,6 +160,7 @@ func (t *TaskPool) TaskFunc(i any) {
 		appString = " "
 	}
 
+	//输出日志
 	wsMsg := logger.Global.Color().Green(fmt.Sprintf("%-"+strconv.Itoa(20)+"s", tcpFinger.Uri)) + "	" + "[" + logger.Global.Color().Yellow(tcpFinger.Service) + "]" + "\t" + appString
 
 	conMsg := net.JoinHostPort(host, port) + "\t" + tcpFinger.Service
@@ -159,6 +171,10 @@ func (t *TaskPool) TaskFunc(i any) {
 	if tcpFinger.WebApp.Title != "" {
 		wsMsg += logger.Global.Color().Red("[") + tcpFinger.WebApp.Title + logger.Global.Color().Red("]")
 		conMsg += " [" + tcpFinger.WebApp.Title + "]"
+	}
+
+	if CaptureFinger != nil {
+		CaptureFinger(t.Params.TaskID, tcpFinger.IP, tcpFinger.Port, *tcpFinger)
 	}
 
 	logger.ScanMessage(wsMsg)
@@ -178,7 +194,7 @@ func (t *TaskPool) TaskFunc(i any) {
 
 		//调用poc插件检测
 		go func() {
-			vulnerability.Verify(tcpFinger, t.Params.Timeout)
+			vulnerability.Verify(CaptureVul, t.Params.TaskID, tcpFinger, t.Params.Timeout)
 			wg.Done()
 		}()
 
@@ -204,7 +220,7 @@ func (t *TaskPool) TaskFunc(i any) {
 					App:    item.App,
 					Target: net.JoinHostPort(tcpFinger.IP, strconv.Itoa(tcpFinger.Port)),
 				}
-				hydra.RunCheck(t.HydraTask, item)
+				hydra.RunCheck(CaptureHydra, t.HydraTask, item)
 			}
 		}()
 	}

@@ -1,4 +1,4 @@
-package aliveCheck
+package alive
 
 import (
 	"context"

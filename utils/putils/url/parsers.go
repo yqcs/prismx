@@ -4,8 +4,8 @@ import (
 	"net/url"
 	"strings"
 
-	errorutil "prismx_cli/utils/putils/errors"
-	stringsutil "prismx_cli/utils/putils/strings"
+	errorutil "github.com/yqcs/prismx/utils/putils/errors"
+	stringsutil "github.com/yqcs/prismx/utils/putils/strings"
 )
 
 // ## URL Parsing Methods

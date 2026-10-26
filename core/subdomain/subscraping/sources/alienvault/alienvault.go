@@ -5,7 +5,8 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"prismx_cli/core/subdomain/subscraping"
+
+	"github.com/yqcs/prismx/core/subdomain/subscraping"
 )
 
 type alienvaultResponse struct {

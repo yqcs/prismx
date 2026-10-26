@@ -3,14 +3,15 @@ package proxyPool
 import (
 	"crypto/tls"
 	"errors"
-	"golang.org/x/net/proxy"
 	"net"
 	"net/http"
 	"net/url"
-	"prismx_cli/utils/arr"
-	"prismx_cli/utils/logger"
 	"strings"
 	"time"
+
+	"github.com/yqcs/prismx/utils/arr"
+	"github.com/yqcs/prismx/utils/logger"
+	"golang.org/x/net/proxy"
 )
 
 // proxyList 存活的代理 URL格式 <schema>://<user>:<password>@<host>:<port>/<path>:<params>?<query>#<frag>

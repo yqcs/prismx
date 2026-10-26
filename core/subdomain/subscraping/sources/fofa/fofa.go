@@ -7,8 +7,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"prismx_cli/core/subdomain/subscraping"
 	"strings"
+
+	"github.com/yqcs/prismx/core/subdomain/subscraping"
 )
 
 type fofaResponse struct {

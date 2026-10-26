@@ -8,7 +8,7 @@ import (
 	"github.com/Masterminds/semver/v3"
 	"github.com/logrusorgru/aurora"
 
-	"prismx_cli/utils/putils/process"
+	"github.com/yqcs/prismx/utils/putils/process"
 )
 
 type AssetFormat uint

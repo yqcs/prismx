@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"prismx_cli/utils/putils/reflect/tests"
+	"github.com/yqcs/prismx/utils/putils/reflect/tests"
 )
 
 type TestStruct struct {

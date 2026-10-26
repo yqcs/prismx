@@ -5,9 +5,10 @@ import (
 	"database/sql/driver"
 	"errors"
 	"fmt"
-	"prismx_cli/utils/go-ora/converters"
 	"reflect"
 	"strings"
+
+	"github.com/yqcs/prismx/utils/go-ora/converters"
 )
 
 type customType struct {

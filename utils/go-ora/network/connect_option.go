@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"prismx_cli/utils/go-ora/trace"
+	"github.com/yqcs/prismx/utils/go-ora/trace"
 )
 
 type ServerAddr struct {

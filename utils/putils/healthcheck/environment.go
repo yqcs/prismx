@@ -5,9 +5,9 @@ import (
 	"runtime"
 
 	"github.com/projectdiscovery/fdmax"
-	iputil "prismx_cli/utils/putils/ip"
-	permissionutil "prismx_cli/utils/putils/permission"
-	router "prismx_cli/utils/putils/routing"
+	iputil "github.com/yqcs/prismx/utils/putils/ip"
+	permissionutil "github.com/yqcs/prismx/utils/putils/permission"
+	router "github.com/yqcs/prismx/utils/putils/routing"
 )
 
 type EnvironmentInfo struct {

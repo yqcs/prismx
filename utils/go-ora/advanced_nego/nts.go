@@ -3,7 +3,8 @@ package advanced_nego
 import (
 	"encoding/binary"
 	"errors"
-	"prismx_cli/utils/go-ora/advanced_nego/ntlmssp"
+
+	"github.com/yqcs/prismx/utils/go-ora/advanced_nego/ntlmssp"
 )
 
 type NTSAuthInterface interface {

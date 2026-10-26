@@ -12,13 +12,13 @@ import (
 
 	"github.com/lunixbochs/struc"
 
-	"prismx_cli/utils/go-rdp/protocol/nla"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/nla"
 
-	"prismx_cli/utils/go-rdp/core"
-	"prismx_cli/utils/go-rdp/emission"
-	"prismx_cli/utils/go-rdp/protocol/lic"
-	"prismx_cli/utils/go-rdp/protocol/t125"
-	"prismx_cli/utils/go-rdp/protocol/t125/gcc"
+	"github.com/yqcs/prismx/utils/go-rdp/core"
+	"github.com/yqcs/prismx/utils/go-rdp/emission"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/lic"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/t125"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/t125/gcc"
 )
 
 /**

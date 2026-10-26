@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"prismx_cli/utils/arr"
+	"github.com/yqcs/prismx/utils/arr"
 )
 
 const (

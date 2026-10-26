@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"prismx_cli/core/subdomain/subscraping"
+	"github.com/yqcs/prismx/core/subdomain/subscraping"
 )
 
 // zoomAuth holds the ZoomEye credentials

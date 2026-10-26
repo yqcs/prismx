@@ -5,7 +5,8 @@ import (
 	"errors"
 	"fmt"
 	"net"
-	"prismx_cli/utils/go-ora/network"
+
+	"github.com/yqcs/prismx/utils/go-ora/network"
 )
 
 var version int = 0xB200200

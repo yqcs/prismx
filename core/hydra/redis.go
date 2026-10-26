@@ -1,10 +1,11 @@
 package hydra
 
 import (
-	"github.com/go-redis/redis"
 	"net"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/netUtils"
+
+	"github.com/go-redis/redis"
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/netUtils"
 )
 
 func RedisWeakPass(res any) any {

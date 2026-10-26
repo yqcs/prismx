@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"io"
 
-	"prismx_cli/utils/go-rdp/core"
+	"github.com/yqcs/prismx/utils/go-rdp/core"
 )
 
 func ReadEnumerates(r io.Reader) (uint8, error) {

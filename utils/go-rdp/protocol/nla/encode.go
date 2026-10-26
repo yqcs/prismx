@@ -6,8 +6,8 @@ import (
 	"crypto/rc4"
 	"strings"
 
+	"github.com/yqcs/prismx/utils/go-rdp/core"
 	"golang.org/x/crypto/md4"
-	"prismx_cli/utils/go-rdp/core"
 )
 
 func MD4(data []byte) []byte {

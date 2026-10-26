@@ -6,9 +6,10 @@ import (
 	"fmt"
 	"io"
 	"net/url"
-	"prismx_cli/core/subdomain/subscraping"
 	"regexp"
 	"strings"
+
+	"github.com/yqcs/prismx/core/subdomain/subscraping"
 )
 
 // CSRFSubMatchLength CSRF regex submatch length

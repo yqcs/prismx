@@ -4,8 +4,8 @@ import (
 	"errors"
 	"net"
 
+	mapsutil "github.com/yqcs/prismx/utils/putils/maps"
 	"go.uber.org/multierr"
-	mapsutil "prismx_cli/utils/putils/maps"
 )
 
 type InFlightConns struct {

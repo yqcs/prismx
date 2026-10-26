@@ -7,8 +7,8 @@ import (
 	"runtime"
 	"strings"
 
-	fileutil "prismx_cli/utils/putils/file"
-	mapsutil "prismx_cli/utils/putils/maps"
+	fileutil "github.com/yqcs/prismx/utils/putils/file"
+	mapsutil "github.com/yqcs/prismx/utils/putils/maps"
 )
 
 var (

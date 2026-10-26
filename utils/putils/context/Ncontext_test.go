@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	contextutil "prismx_cli/utils/putils/context"
+	contextutil "github.com/yqcs/prismx/utils/putils/context"
 )
 
 func TestExecFuncWithTwoReturns(t *testing.T) {

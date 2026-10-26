@@ -2,17 +2,18 @@ package hydra
 
 import (
 	"errors"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/go-rdp/core"
-	"prismx_cli/utils/go-rdp/protocol/nla"
-	"prismx_cli/utils/go-rdp/protocol/pdu"
-	"prismx_cli/utils/go-rdp/protocol/rfb"
-	"prismx_cli/utils/go-rdp/protocol/sec"
-	"prismx_cli/utils/go-rdp/protocol/t125"
-	"prismx_cli/utils/go-rdp/protocol/tpkt"
-	"prismx_cli/utils/go-rdp/protocol/x224"
-	"prismx_cli/utils/netUtils"
 	"sync"
+
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/go-rdp/core"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/nla"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/pdu"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/rfb"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/sec"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/t125"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/tpkt"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/x224"
+	"github.com/yqcs/prismx/utils/netUtils"
 )
 
 type rdpClient struct {

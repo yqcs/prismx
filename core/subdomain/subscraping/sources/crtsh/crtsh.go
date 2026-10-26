@@ -5,11 +5,12 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	_ "github.com/lib/pq"
 	"io"
-	"prismx_cli/core/subdomain/subscraping"
-	"prismx_cli/utils/arr"
 	"strings"
+
+	_ "github.com/lib/pq"
+	"github.com/yqcs/prismx/core/subdomain/subscraping"
+	"github.com/yqcs/prismx/utils/arr"
 )
 
 type subdomain struct {

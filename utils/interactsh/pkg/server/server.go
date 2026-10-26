@@ -1,9 +1,10 @@
 package server
 
 import (
-	"prismx_cli/utils/interactsh/pkg/storage"
 	"strings"
 	"time"
+
+	"github.com/yqcs/prismx/utils/interactsh/pkg/storage"
 )
 
 // Interaction is an interaction received to the server.

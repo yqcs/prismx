@@ -1,16 +1,17 @@
 package netUtils
 
 import (
-	"github.com/saintfish/chardet"
 	"net"
 	"net/http"
 	"net/http/httputil"
-	"prismx_cli/utils/arr"
-	"prismx_cli/utils/cryptoPlus"
-	"prismx_cli/utils/proxyPool"
-	"prismx_cli/utils/randomUtils"
 	"strings"
 	"time"
+
+	"github.com/saintfish/chardet"
+	"github.com/yqcs/prismx/utils/arr"
+	"github.com/yqcs/prismx/utils/cryptoPlus"
+	"github.com/yqcs/prismx/utils/proxyPool"
+	"github.com/yqcs/prismx/utils/randomUtils"
 )
 
 // Pool URL格式 <schema>://<user>:<password>@<host>:<port>/<path>:<params>?<query>#<frag>

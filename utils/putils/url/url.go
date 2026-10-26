@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"strings"
 
-	osutils "prismx_cli/utils/putils/os"
+	osutils "github.com/yqcs/prismx/utils/putils/os"
 )
 
 // URL a wrapper around net/url.URL

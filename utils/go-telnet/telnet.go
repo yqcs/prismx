@@ -4,10 +4,11 @@ import (
 	"bytes"
 	"errors"
 	"net"
-	"prismx_cli/utils/netUtils"
 	"regexp"
 	"strings"
 	"time"
+
+	"github.com/yqcs/prismx/utils/netUtils"
 )
 
 const (

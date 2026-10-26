@@ -7,8 +7,8 @@ import (
 	"os"
 
 	"github.com/lunixbochs/struc"
-	"prismx_cli/utils/go-rdp/core"
-	"prismx_cli/utils/go-rdp/protocol/t125/per"
+	"github.com/yqcs/prismx/utils/go-rdp/core"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/t125/per"
 )
 
 var t124_02_98_oid = []byte{0, 0, 20, 124, 0, 1}

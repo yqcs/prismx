@@ -8,8 +8,9 @@ import (
 	"fmt"
 	"io"
 	"net/url"
-	"prismx_cli/core/subdomain/subscraping"
 	"strings"
+
+	"github.com/yqcs/prismx/core/subdomain/subscraping"
 )
 
 const indexURL = "https://index.commoncrawl.org/collinfo.json"

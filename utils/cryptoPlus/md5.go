@@ -4,7 +4,8 @@ import (
 	"crypto/md5"
 	"fmt"
 	"io"
-	"prismx_cli/utils/logger"
+
+	"github.com/yqcs/prismx/utils/logger"
 )
 
 func ToMD5(str string) string {

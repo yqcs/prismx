@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	fileutil "prismx_cli/utils/putils/file"
-	osutils "prismx_cli/utils/putils/os"
+	fileutil "github.com/yqcs/prismx/utils/putils/file"
+	osutils "github.com/yqcs/prismx/utils/putils/os"
 )
 
 func TestGetFiles(t *testing.T) {

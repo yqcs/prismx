@@ -1,11 +1,20 @@
 package scan
 
 import (
-	"github.com/panjf2000/ants/v2"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/logger"
-	"prismx_cli/utils/task"
 	"time"
+
+	"github.com/panjf2000/ants/v2"
+	fingerprint "github.com/yqcs/fingerscan"
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/logger"
+	"github.com/yqcs/prismx/utils/task"
+)
+
+var (
+	CaptureHost   func(id, host string)
+	CaptureFinger func(id string, host string, port int, finger fingerprint.AppFinger)
+	CaptureVul    func(id string, host string, port int, vul models.MSG)
+	CaptureHydra  func(id string, target, app string, msg models.MSG)
 )
 
 type TaskPool struct {

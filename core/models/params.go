@@ -1,8 +1,9 @@
 package models
 
 import (
-	"prismx_cli/utils/task"
 	"time"
+
+	"github.com/yqcs/prismx/utils/task"
 )
 
 var PassDict = map[string][]string{}
@@ -26,6 +27,7 @@ type HydraTask struct {
 }
 
 type ScanParams struct {
+	TaskID                                                            string        //任务唯一ID
 	IP, Port, BlackPort, BlackIP                                      string        //要检查的IP、端口以及黑名单
 	Timeout                                                           time.Duration //网络超时
 	Thread                                                            int           //线程数

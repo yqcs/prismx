@@ -3,10 +3,11 @@ package x224
 import (
 	"bytes"
 	"errors"
+
 	"github.com/lunixbochs/struc"
-	"prismx_cli/utils/go-rdp/core"
-	"prismx_cli/utils/go-rdp/emission"
-	"prismx_cli/utils/go-rdp/protocol/tpkt"
+	"github.com/yqcs/prismx/utils/go-rdp/core"
+	"github.com/yqcs/prismx/utils/go-rdp/emission"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/tpkt"
 )
 
 // take idea from https://github.com/Madnikulin50/gordp

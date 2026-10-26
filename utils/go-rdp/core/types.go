@@ -1,6 +1,6 @@
 package core
 
-import "prismx_cli/utils/go-rdp/emission"
+import "github.com/yqcs/prismx/utils/go-rdp/emission"
 
 type Transport interface {
 	Read(b []byte) (n int, err error)

@@ -5,8 +5,9 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"prismx_cli/utils/logger"
 	"strings"
+
+	"github.com/yqcs/prismx/utils/logger"
 )
 
 // FilesList 获取目录下指定后缀文件

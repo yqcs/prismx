@@ -12,14 +12,15 @@ import (
 	"errors"
 	"fmt"
 	"net"
-	"prismx_cli/utils/netUtils"
 	"reflect"
 	"strings"
 	"time"
 
-	"prismx_cli/utils/go-ora/trace"
+	"github.com/yqcs/prismx/utils/netUtils"
 
-	"prismx_cli/utils/go-ora/converters"
+	"github.com/yqcs/prismx/utils/go-ora/trace"
+
+	"github.com/yqcs/prismx/utils/go-ora/converters"
 )
 
 //var ErrConnectionReset error = errors.New("connection reset")

@@ -4,10 +4,11 @@ import (
 	"context"
 	"io"
 	"net/http"
-	"prismx_cli/utils/netUtils"
 	"regexp"
 	"sync"
 	"time"
+
+	"github.com/yqcs/prismx/utils/netUtils"
 
 	"go.uber.org/ratelimit"
 )

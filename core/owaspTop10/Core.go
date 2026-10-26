@@ -1,16 +1,17 @@
 package owaspTop10
 
 import (
-	"github.com/gocolly/colly"
 	"net/url"
-	"prismx_cli/core/owaspTop10/fileIncloud"
-	"prismx_cli/core/owaspTop10/sqli"
-	"prismx_cli/core/owaspTop10/xss"
-	"prismx_cli/utils/logger"
-	"prismx_cli/utils/randomUtils"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/gocolly/colly"
+	"github.com/yqcs/prismx/core/owaspTop10/fileIncloud"
+	"github.com/yqcs/prismx/core/owaspTop10/sqli"
+	"github.com/yqcs/prismx/core/owaspTop10/xss"
+	"github.com/yqcs/prismx/utils/logger"
+	"github.com/yqcs/prismx/utils/randomUtils"
 )
 
 type OwaspTop10 struct {

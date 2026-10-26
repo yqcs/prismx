@@ -1,10 +1,11 @@
 package hydra
 
 import (
-	"prismx_cli/core/models"
-	"prismx_cli/utils/netUtils"
 	"strings"
 	"time"
+
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/netUtils"
 )
 
 func MemcachedWeakPass(res any) any {

@@ -1,7 +1,7 @@
 package go_ora
 
 import (
-	"prismx_cli/utils/go-ora/network"
+	"github.com/yqcs/prismx/utils/go-ora/network"
 )
 
 type rowid struct {

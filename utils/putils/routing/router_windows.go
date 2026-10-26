@@ -10,7 +10,7 @@ import (
 
 	"github.com/asaskevich/govalidator"
 	"github.com/pkg/errors"
-	stringsutil "prismx_cli/utils/putils/strings"
+	stringsutil "github.com/yqcs/prismx/utils/putils/strings"
 )
 
 // New creates a routing engine for windows

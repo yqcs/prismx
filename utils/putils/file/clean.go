@@ -4,7 +4,7 @@ import (
 	"os"
 	"path/filepath"
 
-	errorutil "prismx_cli/utils/putils/errors"
+	errorutil "github.com/yqcs/prismx/utils/putils/errors"
 )
 
 var (

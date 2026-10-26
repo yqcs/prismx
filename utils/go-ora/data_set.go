@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"prismx_cli/utils/go-ora/network"
-	"prismx_cli/utils/go-ora/trace"
+	"github.com/yqcs/prismx/utils/go-ora/network"
+	"github.com/yqcs/prismx/utils/go-ora/trace"
 )
 
 // Compile time Sentinels for implemented Interfaces.

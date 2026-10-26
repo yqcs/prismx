@@ -1,9 +1,9 @@
 package hydra
 
 import (
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/netUtils"
 	"golang.org/x/crypto/ssh"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/netUtils"
 )
 
 func SSHWeakPass(res any) any {

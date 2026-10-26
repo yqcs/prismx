@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"sync"
 
-	"prismx_cli/utils/putils/sync/sizedpool"
+	"github.com/yqcs/prismx/utils/putils/sync/sizedpool"
 )
 
 var (

@@ -1,6 +1,6 @@
 package network
 
-import "prismx_cli/utils/go-ora/network/security"
+import "github.com/yqcs/prismx/utils/go-ora/network/security"
 
 type SessionContext struct {
 	//conn net.Conn

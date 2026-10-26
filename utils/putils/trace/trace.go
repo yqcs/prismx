@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"prismx_cli/utils/putils/generic"
+	"github.com/yqcs/prismx/utils/putils/generic"
 )
 
 const (

@@ -1,10 +1,11 @@
 package hydra
 
 import (
-	"github.com/jlaffaye/ftp"
 	"net"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/netUtils"
+
+	"github.com/jlaffaye/ftp"
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/netUtils"
 )
 
 func FtpWeakPass(res any) any {

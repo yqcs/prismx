@@ -7,9 +7,9 @@ import (
 	"reflect"
 
 	"github.com/tidwall/gjson"
+	"github.com/yqcs/prismx/utils/putils/conversion"
+	sliceutil "github.com/yqcs/prismx/utils/putils/slice"
 	"golang.org/x/exp/maps"
-	"prismx_cli/utils/putils/conversion"
-	sliceutil "prismx_cli/utils/putils/slice"
 )
 
 var (

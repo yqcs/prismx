@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	"prismx_cli/utils/go-ora/converters"
-	"prismx_cli/utils/go-ora/network"
+	"github.com/yqcs/prismx/utils/go-ora/converters"
+	"github.com/yqcs/prismx/utils/go-ora/network"
 )
 
 type TNSType int

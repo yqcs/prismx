@@ -2,7 +2,8 @@ package cryptoPlus
 
 import (
 	"encoding/base64"
-	"prismx_cli/utils/logger"
+
+	"github.com/yqcs/prismx/utils/logger"
 )
 
 // Base64Decode 解密

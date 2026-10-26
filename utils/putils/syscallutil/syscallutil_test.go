@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	osutils "prismx_cli/utils/putils/os"
+	osutils "github.com/yqcs/prismx/utils/putils/os"
 )
 
 func TestLoadLibrary(t *testing.T) {

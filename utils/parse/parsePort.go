@@ -1,10 +1,11 @@
 package parse
 
 import (
-	"prismx_cli/utils/arr"
 	"sort"
 	"strconv"
 	"strings"
+
+	"github.com/yqcs/prismx/utils/arr"
 )
 
 func ParsePort(ports string) (scanPorts []int) {

@@ -8,8 +8,9 @@ import (
 	"encoding/base64"
 	"errors"
 	"io"
-	"prismx_cli/utils/logger"
-	"prismx_cli/utils/randomUtils"
+
+	"github.com/yqcs/prismx/utils/logger"
+	"github.com/yqcs/prismx/utils/randomUtils"
 )
 
 // PKCS7 填充

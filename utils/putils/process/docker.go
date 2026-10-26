@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	fileutil "prismx_cli/utils/putils/file"
+	fileutil "github.com/yqcs/prismx/utils/putils/file"
 )
 
 // RunningInContainer checks if the process is running in a docker container

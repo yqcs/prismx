@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/pkg/errors"
-	iputil "prismx_cli/utils/putils/ip"
+	iputil "github.com/yqcs/prismx/utils/putils/ip"
 )
 
 type RouteType string

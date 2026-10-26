@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"fmt"
 
-	"prismx_cli/utils/go-rdp/core"
-	"prismx_cli/utils/go-rdp/emission"
-	"prismx_cli/utils/go-rdp/protocol/nla"
+	"github.com/yqcs/prismx/utils/go-rdp/core"
+	"github.com/yqcs/prismx/utils/go-rdp/emission"
+	"github.com/yqcs/prismx/utils/go-rdp/protocol/nla"
 )
 
 // take idea from https://github.com/Madnikulin50/gordp

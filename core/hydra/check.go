@@ -3,15 +3,16 @@ package hydra
 import (
 	"context"
 	"fmt"
-	"github.com/panjf2000/ants/v2"
 	"net"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/logger"
-	"prismx_cli/utils/netUtils"
-	"prismx_cli/utils/task"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/panjf2000/ants/v2"
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/logger"
+	"github.com/yqcs/prismx/utils/netUtils"
+	"github.com/yqcs/prismx/utils/task"
 )
 
 type proxyDialer struct {
@@ -23,7 +24,7 @@ func (c *proxyDialer) DialContext(ctx context.Context, network, addr string) (ne
 	return netUtils.SendDialTimeout(network, addr, c.timeout)
 }
 
-func RunCheck(t *models.HydraTask, app models.HydraAppFunc) {
+func RunCheck(captureHydra func(id string, target, app string, msg models.MSG), t *models.HydraTask, app models.HydraAppFunc) {
 
 	if len(models.UserDict[app.App]) != 0 && len(models.PassDict[app.App]) == 0 {
 		//有用户名无密码的情况
@@ -66,6 +67,9 @@ func RunCheck(t *models.HydraTask, app models.HydraAppFunc) {
 			if out != nil {
 				data := out.(models.MSG)
 				account := data.Payload.(models.Dict)
+				if captureHydra != nil {
+					captureHydra(t.Config.TaskID, t.Target, t.App, out.(models.MSG))
+				}
 				if data.Type == "Unauthorized" {
 					logger.ScanMessage(logger.Global.Color().Green(fmt.Sprintf("%-"+strconv.Itoa(20)+"s", t.Target)) + fmt.Sprintf(" [%s] Detect Unauthorized access", logger.Global.Color().YellowBg(app.App)))
 				} else {

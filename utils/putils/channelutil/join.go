@@ -5,7 +5,7 @@ import (
 	"log"
 	"sync"
 
-	errorutil "prismx_cli/utils/putils/errors"
+	errorutil "github.com/yqcs/prismx/utils/putils/errors"
 )
 
 // JoinChannels provides method to Join channels

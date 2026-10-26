@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/remeh/sizedwaitgroup"
-	errorutil "prismx_cli/utils/putils/errors"
+	errorutil "github.com/yqcs/prismx/utils/putils/errors"
 )
 
 type proxyResult struct {

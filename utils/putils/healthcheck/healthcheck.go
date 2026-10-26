@@ -3,8 +3,8 @@ package healthcheck
 import (
 	"path/filepath"
 
-	fileutil "prismx_cli/utils/putils/file"
-	folderutil "prismx_cli/utils/putils/folder"
+	fileutil "github.com/yqcs/prismx/utils/putils/file"
+	folderutil "github.com/yqcs/prismx/utils/putils/folder"
 )
 
 var (

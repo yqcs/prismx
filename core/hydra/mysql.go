@@ -4,10 +4,11 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
-	"github.com/go-sql-driver/mysql"
 	"net"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/netUtils"
+
+	"github.com/go-sql-driver/mysql"
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/netUtils"
 )
 
 type noLog struct{}

@@ -7,7 +7,8 @@ import (
 	"errors"
 	"fmt"
 	"math/big"
-	"prismx_cli/utils/go-ora/network/security"
+
+	"github.com/yqcs/prismx/utils/go-ora/network/security"
 )
 
 type dataIntegrityService struct {

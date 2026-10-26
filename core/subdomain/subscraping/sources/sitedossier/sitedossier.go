@@ -6,9 +6,10 @@ import (
 	"fmt"
 	"io"
 	"math/rand"
-	"prismx_cli/core/subdomain/subscraping"
 	"regexp"
 	"time"
+
+	"github.com/yqcs/prismx/core/subdomain/subscraping"
 )
 
 // SleepRandIntn is the integer value to get the pseudo-random number

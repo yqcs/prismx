@@ -1,7 +1,7 @@
 package dedupe
 
 import (
-	"prismx_cli/utils/hmap/store/hybrid"
+	"github.com/yqcs/prismx/utils/hmap/store/hybrid"
 )
 
 type LevelDBBackend struct {

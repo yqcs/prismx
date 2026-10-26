@@ -2,9 +2,9 @@ package hydra
 
 import (
 	"context"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/go-vnc"
-	"prismx_cli/utils/netUtils"
+
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/netUtils"
 )
 
 func VncWeakPass(res any) any {

@@ -3,11 +3,12 @@ package parse
 import (
 	"errors"
 	"net"
-	"prismx_cli/utils/arr"
 	"regexp"
 	"sort"
 	"strconv"
 	"strings"
+
+	"github.com/yqcs/prismx/utils/arr"
 )
 
 var errTips = errors.New(" host parsing error\n" +

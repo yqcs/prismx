@@ -8,7 +8,7 @@ import (
 	"time"
 
 	gojarm "github.com/hdm/jarm-go"
-	connpool "prismx_cli/utils/putils/conn/connpool"
+	connpool "github.com/yqcs/prismx/utils/putils/conn/connpool"
 )
 
 // PoolCount defines how many connection are kept in the pool

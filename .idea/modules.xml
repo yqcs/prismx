@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/prismx_cli.iml" filepath="$PROJECT_DIR$/.idea/prismx_cli.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/github.com/yqcs/prismx.iml" filepath="$PROJECT_DIR$/.idea/github.com/yqcs/prismx.iml" />
     </modules>
   </component>
 </project>

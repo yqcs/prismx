@@ -3,14 +3,15 @@ package logger
 import (
 	"bytes"
 	"fmt"
-	"github.com/mattn/go-colorable"
-	"github.com/mattn/go-isatty"
 	"io"
 	"os"
-	"prismx_cli/utils/logger/color"
 	"sync"
 	"sync/atomic"
 	"time"
+
+	"github.com/mattn/go-colorable"
+	"github.com/mattn/go-isatty"
+	"github.com/yqcs/prismx/utils/logger/color"
 )
 
 func init() {

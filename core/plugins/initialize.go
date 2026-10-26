@@ -2,14 +2,15 @@ package plugins
 
 import (
 	"embed"
-	"gopkg.in/yaml.v3"
 	"os"
-	"prismx_cli/core/hydra"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/arr"
-	"prismx_cli/utils/file"
-	"prismx_cli/utils/logger"
 	"strings"
+
+	"github.com/yqcs/prismx/core/hydra"
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/arr"
+	"github.com/yqcs/prismx/utils/file"
+	"github.com/yqcs/prismx/utils/logger"
+	"gopkg.in/yaml.v3"
 )
 
 var (
@@ -19,8 +20,6 @@ var (
 )
 
 func init() {
-
-	//go reverse.NewResolve() //初始化dns
 
 	WeakPass = []models.HydraAppFunc{
 		{App: "vnc", Func: hydra.VncWeakPass},
@@ -132,7 +131,7 @@ func LoadGo(s string) {
 	//}
 	//
 	//err := intp.Use(map[string]map[string]reflect.Value{
-	//	"prismx_cli/models/models": { //导入models
+	//	"github.com/yqcs/prismx/models/models": { //导入models
 	//		"Register":      reflect.ValueOf(models.Register), //函数类型
 	//		"HydraAppFunc":  reflect.ValueOf((*models.HydraAppFunc)(nil)),
 	//		"VulResult":     reflect.ValueOf((*models.VulResult)(nil)),
@@ -143,18 +142,18 @@ func LoadGo(s string) {
 	//		"ExploitSteps":  reflect.ValueOf((*models.ExploitSteps)(nil)),
 	//		"ExploitParams": reflect.ValueOf((*models.ExploitParams)(nil)),
 	//	},
-	//	"prismx_cli/utils/netUtils/netUtils": { //导入netutils
+	//	"github.com/yqcs/prismx/utils/netUtils/netUtils": { //导入netutils
 	//		"SendHttp":        reflect.ValueOf(netUtils.SendHttp),
 	//		"SendDialTimeout": reflect.ValueOf(netUtils.SendDialTimeout),
 	//		"OpenProxy":       reflect.ValueOf(netUtils.OpenProxy),
 	//		"CloseProxy":      reflect.ValueOf(netUtils.CloseProxy),
 	//		"Result":          reflect.ValueOf((*netUtils.Result)(nil)),
 	//	},
-	//	"prismx_cli/utils/randomUtil/randomUtil": { //导出utils包
+	//	"github.com/yqcs/prismx/utils/randomUtil/randomUtil": { //导出utils包
 	//		"RandomString": reflect.ValueOf(randomUtils.RandomString),
 	//		"GetUserAgent": reflect.ValueOf(randomUtils.GetUserAgent),
 	//	},
-	//	"prismx_cli/utils/reverse/reverse": { //导入反连包
+	//	"github.com/yqcs/prismx/utils/reverse/reverse": { //导入反连包
 	//		"CheckResolveState": reflect.ValueOf(reverse.CheckResolveState),
 	//		"GetResolveUrl":     reflect.ValueOf(reverse.GetResolveUrl),
 	//	},

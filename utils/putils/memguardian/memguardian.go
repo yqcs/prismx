@@ -7,7 +7,7 @@ import (
 	"time"
 
 	units "github.com/docker/go-units"
-	"prismx_cli/utils/putils/env"
+	"github.com/yqcs/prismx/utils/putils/env"
 )
 
 var (

@@ -3,8 +3,9 @@ package go_ora
 import (
 	"errors"
 	"fmt"
-	"prismx_cli/utils/go-ora/network"
 	"time"
+
+	"github.com/yqcs/prismx/utils/go-ora/network"
 )
 
 type DataTypeNego struct {

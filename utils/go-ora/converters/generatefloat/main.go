@@ -14,7 +14,7 @@ import (
 	"strings"
 	"text/template"
 
-	_ "prismx_cli/utils/go-ora"
+	_ "github.com/yqcs/prismx/utils/go-ora"
 )
 
 var testValues = []struct {

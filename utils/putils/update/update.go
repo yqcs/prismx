@@ -4,9 +4,10 @@ import (
 	"crypto/tls"
 	"net/http"
 	"net/url"
-	"prismx_cli/utils/machineid"
 	"runtime"
 	"time"
+
+	"github.com/yqcs/prismx/utils/machineid"
 )
 
 const (

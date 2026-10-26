@@ -8,11 +8,11 @@ import (
 	"github.com/google/cel-go/common/types"
 	"github.com/google/cel-go/common/types/ref"
 	"github.com/google/cel-go/interpreter/functions"
+	"github.com/yqcs/prismx/utils/cryptoPlus"
+	"github.com/yqcs/prismx/utils/randomUtils"
 	exprpb "google.golang.org/genproto/googleapis/api/expr/v1alpha1"
 	"math/rand"
 	"net/url"
-	"prismx_cli/utils/cryptoPlus"
-	"prismx_cli/utils/randomUtils"
 	"regexp"
 	"strings"
 )

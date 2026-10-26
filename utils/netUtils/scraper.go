@@ -2,10 +2,11 @@ package netUtils
 
 import (
 	"net/http"
-	"prismx_cli/utils/cryptoPlus"
 	"regexp"
 	"strings"
 	"time"
+
+	"github.com/yqcs/prismx/utils/cryptoPlus"
 
 	"golang.org/x/net/html"
 )

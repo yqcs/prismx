@@ -7,7 +7,7 @@ import (
 	"os"
 	"runtime"
 
-	raceutil "prismx_cli/utils/putils/race"
+	raceutil "github.com/yqcs/prismx/utils/putils/race"
 
 	"golang.org/x/sys/unix"
 )

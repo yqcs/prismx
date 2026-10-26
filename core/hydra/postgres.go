@@ -3,10 +3,11 @@ package hydra
 import (
 	"context"
 	"fmt"
-	"github.com/jackc/pgx/v5"
 	"net"
-	"prismx_cli/core/models"
-	"prismx_cli/utils/netUtils"
+
+	"github.com/jackc/pgx/v5"
+	"github.com/yqcs/prismx/core/models"
+	"github.com/yqcs/prismx/utils/netUtils"
 )
 
 func PGSQLWeakPass(res any) any {

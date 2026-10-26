@@ -1,8 +1,8 @@
 package cryptoPlus
 
 import (
+	"github.com/yqcs/prismx/utils/logger"
 	"golang.org/x/crypto/bcrypt"
-	"prismx_cli/utils/logger"
 )
 
 // ValidateBcryptPassWd 验证密码

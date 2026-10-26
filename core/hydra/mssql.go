@@ -5,8 +5,8 @@ import (
 	"fmt"
 	_ "github.com/denisenkom/go-mssqldb"
 	mssql "github.com/denisenkom/go-mssqldb"
+	"github.com/yqcs/prismx/core/models"
 	"net"
-	"prismx_cli/core/models"
 )
 
 func MSSQLWeakPass(res any) any {
