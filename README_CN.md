@@ -1,4 +1,4 @@
-<h1 align="left">棱镜 X · Open Source</h1> 
+<h1 align="left">棱镜 X · Open Source v1.5</h1> 
 
 <a href="README.md">`English`</a> • <a href="README_CN.md">`中文`</a>
 

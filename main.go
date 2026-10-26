@@ -14,12 +14,16 @@ import (
 	fingerprint "github.com/yqcs/fingerscan"
 	_ "go.uber.org/automaxprocs"
 
+	"prismx_cli/core/models"
+	"prismx_cli/scan"
+	"prismx_cli/utils/arr"
+	"prismx_cli/utils/logger"
+	"prismx_cli/utils/parse"
+	"prismx_cli/utils/reverse"
 	"strings"
 	"time"
 
-	"github.com/yqcs/prismx/utils/randomUtils"
-	"github.com/yqcs/prismx/utils/reverse"
-	"github.com/yqcs/prismx/utils/task"
+	fingerprint "github.com/yqcs/fingerscan"
 )
 
 var (
@@ -40,7 +44,6 @@ func init() {
 	reverse.NewResolve()     //初始化dns
 	fingerprint.InitFinger() //初始化指纹
 
-	//初始化账号密码
 	password := strings.Split("123456,{user},Admin@12345,toor,qwe!2345,qwe!123,admin123,sidtek20.21,pass123,pass@123,password,123123,654321,111111,123,1,admin@123,Admin@123,admin123!@#,{user}1,{user}111,{user}123,{user}@123,{user}_123,{user}#123,{user}@111,{user}@2019,{user}@123#4,P@ssw0rd!,P@ssw0rd,Passw0rd,qwe123,12345678,test,test123,123qwe!@#,123456789,123321,666666,a123456.,123456~a,123456!a,000000,1234567890,8888888,!QAZ2wsx,1qaz2wsx,abc123,abc123456,1qaz@WSX,a11111,a12345,Aa1234,Aa1234.,Aa12345,a123456,a123123,Aa123123,Aa123456,Aa12345.,sysadmin,system,1qaz!QAZ,2wsx@WSX,qwe123!@#,Aa123456!,A123456s!,sa123456,1q2w3e", ",")
 
 	models.UserDict["ftp"] = strings.Split("ftp,admin,www,web,root,db,wwwroot,data,anonymous", ",")
@@ -102,7 +105,7 @@ func main() {
 ( ( ) │└┘  ╠═╝├┬┘│└─┐│││╔╩╦╝
  \\/  └──  ╩  ┴└─┴└─┘┴ ┴╩ ╚═
   '  :: PrismX Powerful security vulnerability scanning and attack threat capture tools
-  //[Version OpenSource 1.0.0] (c) 2023 prismx.io All rights reserved. website[www.prismx.io]`)
+  //[Version OpenSource 1.5.0] (c) 2023 prismx.io All rights reserved. website[www.prismx.io]`)
 
 	if len(os.Args) == 1 || *target == "" {
 		logger.Warn("Run command: -h")
@@ -116,19 +119,31 @@ func main() {
 		logger.Fatal(err)
 	}
 
-	params := models.ScanParams{Uri: domainList, SubDomain: *subdomain, HostList: host, IP: *target, BlackIP: *blackIP, BlackPort: *blackPort, Ping: *ping, PN: *pn, WeakPass: *weak, Vul: *vul, PortList: parse.GetScanPort(*port, *blackPort), TaskID: randomUtils.RandomString(8)}
+	params := models.ScanParams{
+		AliveFuzz: true,
+		Uri:       domainList,
+		SubDomain: *subdomain,
+		HostList:  host,
+		IP:        *target,
+		BlackIP:   *blackIP,
+		BlackPort: *blackPort,
+		Ping:      *ping,
+		PN:        *pn,
+		WeakPass:  *weak,
+		Vul:       *vul,
+		PortList:  parse.GetScanPort(*port, *blackPort)}
 
 	if *mode == "s" {
-		params.Thread = 800
-		params.Timeout = 20 * time.Second
+		params.Thread = 2000
+		params.Timeout = 15 * time.Second
 	}
 	if *mode == "d" {
-		params.Thread = 1500
-		params.Timeout = 15 * time.Second
+		params.Thread = 3500
+		params.Timeout = 10 * time.Second
 	}
 	if *mode == "f" {
-		params.Thread = 2500
-		params.Timeout = 15 * time.Second
+		params.Thread = 8000
+		params.Timeout = 20 * time.Second
 	}
 
 	if len(params.PortList) == 0 {
@@ -137,7 +152,7 @@ func main() {
 	}
 
 	//创建任务实例
-	pool := scan.TaskPool{Params: params, Scan: task.NewPool()}
+	pool := scan.TaskPool{Params: params}
 	//启动任务
 	pool.Start()
 
